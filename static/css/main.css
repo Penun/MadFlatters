@@ -1,0 +1,52 @@
+#breadImg {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	/* background-color: #662266; */
+}
+
+#mainDiv {
+	width: 92.25%;
+	margin: auto;
+}
+
+#headNav ul {
+	list-style: none;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+#headNav ul li {
+	width: 49%;
+	padding-bottom: 20%;
+    height: auto;
+    position:relative;
+    display:inline-flex;
+    background-image: url('/static/img/temp_bread.png');
+    background-size: cover;
+}
+
+.ratio {
+	width: 100%;
+	padding-bottom: 60%;
+	position: relative;
+	
+}
+
+#map {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	background-color: #CCC;
+}
+
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
