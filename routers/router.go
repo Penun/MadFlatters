@@ -14,4 +14,5 @@ func init() {
     beego.Router("/manage", &manage.ManageHomeController{})
     beego.Router("/manage/coordinates", &manage.CoordinatesController{})
     beego.Router("/manage/orders", &manage.OrdersController{})
+    beego.Router("/manage/password", &manage.PasswordController{})
 }

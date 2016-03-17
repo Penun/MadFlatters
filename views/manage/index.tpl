@@ -36,12 +36,12 @@
 				<button type="button" ng-click="ordCont.Archive()">Archive Selected</button>
 			</form>
 		</div>
-		<div id="upPassTab" ng-show="tabM.isSelected(3)">
-			<form id="passForm" novalidate>
-				Current Password: <input type="password" name="curPass" />
-				New Password: <input type="password" name="newPass"/>
-				Confirm: <input type="password" name="conPass" />
-				<button type="button">Submit</button>
+		<div id="upPassTab" ng-controller="upPassController as upPCont" ng-show="tabM.isSelected(3)">
+			<form id="passForm" ng-submit="passForm.$valid && upPCont.updatePassword()"  novalidate>
+				Current Password: <input type="password" name="curPass" ng-model="upPCont.passSet.curPass" required/><br />
+				New Password: <input type="password" name="newPass" ng-model="upPCont.passSet.newPass" required/><br />
+				Confirm: <input type="password" name="conPass" ng-model="upPCont.passSet.conPass" required/><br />
+				<input type="submit" name="submit" value="Submit" />
 			</form>
 		</div>
 	</div>

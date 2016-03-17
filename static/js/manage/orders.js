@@ -7,13 +7,11 @@
 		$scope.selectedOrders = function selectedOrders() {
 			return filterFilter($scope.orders, {selected: true});
 		}
-
 		$scope.$watch('orders|filter:{selected:true}', function(nv){
 			$scope.activeOrders = nv.map(function(order){
 				return order.or_id;
 			});
 		}, true);
-
 		this.Archive = function(){
 			var arOrders = [];
 			for (var i = 0; i < $scope.activeOrders.length; i++){
@@ -35,7 +33,6 @@
 				}
 			});
 		};
-
 		this.RevealDetails = function(or_id){
 			for (var i = 0; i < $scope.orders.length; i++){
 				if ($scope.orders[i].or_id == or_id){

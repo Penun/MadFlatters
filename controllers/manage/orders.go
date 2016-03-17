@@ -16,7 +16,7 @@ type ArchiveResponse struct {
 }
 
 func (this *OrdersController) Post() {
-	user := this.GetSession("user");
+	user := this.GetSession("user")
 	if user != nil {
 		var orders []models.Orders
 		err := json.Unmarshal(this.Ctx.Input.RequestBody, &orders)

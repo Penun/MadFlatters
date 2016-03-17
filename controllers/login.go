@@ -29,7 +29,7 @@ func (this *LoginController) Get() {
 func (this *LoginController) Post() {
 	user := this.GetSession("user")
 	if user != nil {
-		this.TplName = "error.html"	
+		this.Redirect("/manage", 302)
 	} else {
 		var manager models.Managers
 		err := json.Unmarshal(this.Ctx.Input.RequestBody, &manager)
@@ -42,7 +42,7 @@ func (this *LoginController) Post() {
 			io.WriteString(hasher, manager.Password)
 			io.WriteString(hasher, beego.AppConfig.String("salt"))
 			manager.Password = base64.URLEncoding.EncodeToString(hasher.Sum(nil))
-			success := models.TryLogin(manager)
+			success := models.TryLogin(&manager)
 			response := LoginResponse{Success: success, Error: ""}
 			if success {
 				this.SetSession("user", manager)

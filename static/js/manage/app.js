@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('flatterM', ['flatterM-coordinates', 'flatterM-orders']);
+	var app = angular.module('flatterM', ['flatterM-coordinates', 'flatterM-orders', 'flatterM-upPassword']);
 	app.controller('tabManager', ['$http', '$window', function($http, $window){
 		this.tab = 1;
 		this.selectTab = function(newTab){
