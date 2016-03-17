@@ -9,12 +9,13 @@ import (
 
 func init() {
 	orm.RegisterDriver("mysql", orm.DRMySQL)
-	orm.RegisterDataBase("default", "mysql", "misterMad:Links11@/madflatters?charset=utf8")
+	dbUser := beego.AppConfig.String("mysqluser")
+	dbPass := beego.AppConfig.String("mysqlpass")
+	dbInitial := beego.AppConfig.String("mysqldb")
+	orm.RegisterDataBase("default", "mysql", dbUser + ":" + dbPass + "@/" + dbInitial + "?charset=utf8")
 }
 
 func main() {
-	orm.Debug = true;
+	orm.Debug = true
 	beego.Run()
 }
-
-// misterMad, Links11

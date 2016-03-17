@@ -16,17 +16,22 @@ type ArchiveResponse struct {
 }
 
 func (this *OrdersController) Post() {
-	var orders []models.Orders
-	err := json.Unmarshal(this.Ctx.Input.RequestBody, &orders)
+	user := this.GetSession("user");
+	if user != nil {
+		var orders []models.Orders
+		err := json.Unmarshal(this.Ctx.Input.RequestBody, &orders)
 
-	upSuc := models.ArchiveOrders(orders)
-	
-	if err != nil || !upSuc {
-		response := ArchiveResponse{Success: false, Error: err.Error()}
-		this.Data["json"] = &response
+		upSuc := models.ArchiveOrders(orders)
+		
+		if err != nil || !upSuc {
+			response := ArchiveResponse{Success: false, Error: err.Error()}
+			this.Data["json"] = &response
+		} else {
+			response := ArchiveResponse{Success: true, Error: ""}
+			this.Data["json"] = &response
+		}
+		this.ServeJSON()
 	} else {
-		response := ArchiveResponse{Success: true, Error: ""}
-		this.Data["json"] = &response
+		this.TplName = "error.html"	
 	}
-	this.ServeJSON()
 }

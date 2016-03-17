@@ -13,9 +13,9 @@ type Coordinates struct {
 }
 
 type Managers struct {
-	Manager_id int `orm:"pk"`
-	User_name string
-	Password string
+	Manager_id int `orm:"pk" json:"manager_id"`
+	UserName string `json:"userName"`
+	Password string `json:"password"`
 }
 
 type Orders struct {

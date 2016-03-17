@@ -10,9 +10,6 @@
 		};
 	});
 	app.controller('orderController', [ '$http', function($http){
-		var ord_cont = this;
-		this.submitFail = false;
-		this.submitSuccess = false;
 		this.order = {};
 		this.submitOrder = function(){
 			var sendData = {};
@@ -20,13 +17,29 @@
 			sendData.phone = this.order.phone1 + '-' + this.order.phone2 + '-' + this.order.phone3
 			sendData.details = this.order.details;
 			$http.post('/contact', sendData).success(function(data){
-				if (!data.hadError){
-					ord_cont.submitSuccess = true;
+				if (data.success){
+					// Needs confirm message swap
 				} else {
-					ord_cont.submitFail = true;
+					console.log(data.error);
 				}
 			});
 			this.order = {};
+		};
+	}]);
+	app.controller('loginController', ['$http', '$window', function($http, $window){
+		var logCont = this;
+		this.login = {};
+		this.loginFailed = false;
+		this.tryLogin = function(){
+			$http.post('/login', this.login).success(function(data){
+				if (data.success){
+					$window.location.href = '/manage';
+				} else {
+					console.log(data.error);
+					logCont.loginFailed = true;
+				}
+			});
+			this.login = {};
 		};
 	}]);
 })();

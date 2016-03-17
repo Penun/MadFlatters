@@ -10,12 +10,17 @@ type ManageHomeController struct {
 }
 
 func (this *ManageHomeController) Get() {
-	coor := models.GetCoordinates(1)
-	this.Data["Found"] = coor.C_id != 0 
-	this.Data["Coor"] = coor
+	user := this.GetSession("user")
+	if user != nil {
+		coor := models.GetCoordinates(1)
+		this.Data["Found"] = coor.C_id != 0 
+		this.Data["Coor"] = coor
 
-	orders := models.GetArchivedOrders(false)
-	this.Data["Orders"] = &orders
+		orders := models.GetArchivedOrders(false)
+		this.Data["Orders"] = &orders
 
-	this.TplName = "manage/index.tpl"
+		this.TplName = "manage/index.tpl"
+	} else {
+		this.Redirect("/login", 302)		
+	}
 }

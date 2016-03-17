@@ -17,15 +17,20 @@ type UpdateResponse struct {
 }
 
 func (this *CoordinatesController) Post() {
-	var coor = models.Coordinates{C_id: 1, Occurence: time.Now()}
-	err := json.Unmarshal(this.Ctx.Input.RequestBody, &coor)
-	upSuc := models.UpdateCoordinates(coor)
-	if err != nil || !upSuc {
-		response := UpdateResponse{Success: false, Error: err.Error()}
-		this.Data["json"] = &response
+	user := this.GetSession("user");
+	if user != nil {
+		coor := models.Coordinates{C_id: 1, Occurence: time.Now()}
+		err := json.Unmarshal(this.Ctx.Input.RequestBody, &coor)
+		upSuc := models.UpdateCoordinates(coor)
+		if err != nil || !upSuc {
+			response := UpdateResponse{Success: false, Error: err.Error()}
+			this.Data["json"] = &response
+		} else {
+			response := UpdateResponse{Success: true, Error: ""}
+			this.Data["json"] = &response	
+		}
+		this.ServeJSON()
 	} else {
-		response := UpdateResponse{Success: true, Error: ""}
-		this.Data["json"] = &response	
+		this.TplName = "error.html"		
 	}
-	this.ServeJSON()
 }
