@@ -13,11 +13,6 @@ type PasswordController struct {
 	beego.Controller
 }
 
-/*type UpdateResponse struct {
-	Success bool `json:"success"`
-	Error string `json:"error"`
-}*/
-
 type UpdateRequest struct {
 	CurPass string `json:"curPass"`
 	NewPass string `json:"newPass"`
@@ -43,6 +38,8 @@ func (this *PasswordController) Post() {
 					newPass := base64.URLEncoding.EncodeToString(hasher.Sum(nil))
 					upSuc := models.UpdatePassword(manager.Manager_id, newPass)
 					if upSuc {
+						manager.Password = newPass
+						this.SetSession("user", manager)
 						response.Success = true
 						response.Error = ""
 					} else {
@@ -51,7 +48,7 @@ func (this *PasswordController) Post() {
 					}
 				} else {
 					response.Success = false
-					response.Error = "New Passwords Did Not Match"
+					response.Error = "New Passwords Do Not Match"
 				}
 			} else {
 				response.Success = false

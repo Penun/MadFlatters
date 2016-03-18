@@ -3,7 +3,6 @@ package manage
 import (
 	"github.com/Penun/MadFlatters/models"
 	"github.com/astaxie/beego"
-	"fmt"
 )
 
 type ManageHomeController struct {
@@ -13,7 +12,6 @@ type ManageHomeController struct {
 func (this *ManageHomeController) Get() {
 	user := this.GetSession("user")
 	if user != nil {
-		fmt.Printf("% +v", user)
 		coor := models.GetCoordinates(1)
 		this.Data["Found"] = coor.C_id != 0 
 		this.Data["Coor"] = coor

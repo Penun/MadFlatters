@@ -37,12 +37,14 @@
 			</form>
 		</div>
 		<div id="upPassTab" ng-controller="upPassController as upPCont" ng-show="tabM.isSelected(3)">
-			<form id="passForm" ng-submit="passForm.$valid && upPCont.updatePassword()"  novalidate>
+			<form id="passForm" name="passForm" ng-submit="passForm.$valid && upPCont.updatePassword()"  novalidate>
 				Current Password: <input type="password" name="curPass" ng-model="upPCont.passSet.curPass" required/><br />
 				New Password: <input type="password" name="newPass" ng-model="upPCont.passSet.newPass" required/><br />
 				Confirm: <input type="password" name="conPass" ng-model="upPCont.passSet.conPass" required/><br />
 				<input type="submit" name="submit" value="Submit" />
 			</form>
+			<div ng-show="upPCont.uploadError" id="upPassError">
+			</div>
 		</div>
 	</div>
 </body>
