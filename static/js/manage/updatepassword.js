@@ -1,6 +1,6 @@
 (function(){
 	var app = angular.module('flatterM-upPassword', []);
-	app.controller('upPassController', ['$http', '$scope', function($http, $scope){
+	app.controller('upPassController', ['$http', function($http){
 		var upPassCont = this;
 		this.passSet = {};
 		this.uploadError = false;
