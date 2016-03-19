@@ -10,19 +10,21 @@
 			curOrders = {{.Orders}};
 		})();
 	</script>
-	<div>
+	<div id="sidePanel">
 		{{template "manage/includes/nav.html"}}
 	</div>
-	<div>
+	<div id="mainPanel">
 		<div id="coordTab" ng-controller="coordinatesController as coordCont" ng-show="tabM.isSelected(1)">
 			<div>
-				<p ng-show="coordCont.cuCoord.cuCoordSet"><span>Current Latitude: {{"{{coordCont.cuCoord.Latitude}}"}}</span> :: <span>Current Longitude: {{"{{coordCont.cuCoord.Longitude}}"}}</span></p>
-				<p ng-show="coordCont.nCoord.nCoordSet"><span>New Latitude: {{"{{coordCont.nCoord.Latitude}}"}}</span> :: <span>New Longitude: {{"{{coordCont.nCoord.Longitude}}"}}</span>
+				<p><span ng-show="coordCont.cuCoord.cuCoordSet">Current Latitude: {{"{{coordCont.cuCoord.Latitude}}"}}</span><br />
+					<span ng-show="coordCont.nCoord.nCoordSet"><b>New Latitude: {{"{{coordCont.nCoord.Latitude}}"}}</b></span></p>
+				<p><span ng-show="coordCont.cuCoord.cuCoordSet">Current Longitude: {{"{{coordCont.cuCoord.Longitude}}"}}</span><br />
+					<span ng-show="coordCont.nCoord.nCoordSet"><b>New Longitude: {{"{{coordCont.nCoord.Longitude}}"}}</b></span>
 			</div>
 			<span>
 				<ul>
-					<li ng-click="coordCont.GetNewLocation()">Get New Location</li>
-					<li ng-click="coordCont.UpdateLocation()" ng-show="coordCont.nCoord.nCoordSet">Confirm Updated Location</li>
+					<li ng-hide="coordCont.nCoord.nCoordSet"><button ng-click="coordCont.GetNewLocation()" type="button">Set New Coordinates</button></li>
+					<li ng-show="coordCont.nCoord.nCoordSet"><button ng-click="coordCont.UpdateLocation()" type="button">Confirm Updated Coordinates</button></li>
 				</ul>
 			</span>
 		</div>

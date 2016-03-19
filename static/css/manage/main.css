@@ -1,0 +1,50 @@
+body {
+	margin: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+#sidePanel {
+	width: 33%;
+	height: auto;
+	display: inline-block;
+}
+
+#sidePanel ul {
+	border-style: none ridge ridge;
+	border-color: #0000AA;
+	border-width: 5px;
+	padding: 0;
+}
+
+#sidePanel li {
+	display: block;
+	padding: 15% 10% 15% 10%;
+	border-style: ridge none none;
+	border-color: #0000AA;
+	border-width: 5px;
+	text-align: center;
+	background: #1595FE; 
+	background: -webkit-radial-gradient(circle, #1595FE, #003095); 
+	background: -o-radial-gradient(circle, #1595FE, #003095); /
+	background: -moz-radial-gradient(circle, #1595FE, #003095); 
+	background: radial-gradient(circle, #1595FE, #003095); 
+}
+
+#sidePanel li:active {
+	background: #003095;
+	background: -webkit-radial-gradient(circle, #003095, #1595FE); 
+	background: -o-radial-gradient(circle, #003095, #1595FE); /
+	background: -moz-radial-gradient(circle, #153095, #1595FE); 
+	background: radial-gradient(circle, #1585FB, #0040FB);
+}
+
+#mainPanel {
+	width: 63%;
+	height: auto;
+	display: inline-block;
+	position: absolute;
+	margin: 3% 0% 0% 3%;
+}

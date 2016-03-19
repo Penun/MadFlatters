@@ -5,7 +5,71 @@
 		[
 			[
 				"pa",
-				"padding"
+				"passSet"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"bt",
+				"button	Tag"
+			],
+			[
+				"order",
+				"orders"
+			],
+			[
+				"o",
+				"ordObj"
+			],
+			[
+				"a",
+				"activeOrders"
+			],
+			[
+				"Or",
+				"OrderResponse"
+			],
+			[
+				"Long",
+				"Longitude"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"s",
+				"success"
+			],
+			[
+				"Lati",
+				"Latitude"
+			],
+			[
+				"Lat",
+				"Latitude"
+			],
+			[
+				"newL",
+				"newLat"
+			],
+			[
+				"n",
+				"nCoordSet"
+			],
+			[
+				"Coordi",
+				"Coordinates"
+			],
+			[
+				"sub",
+				"submitSuccess"
+			],
+			[
+				"FN",
+				"FName"
 			],
 			[
 				"back",
@@ -44,94 +108,11 @@
 	"buffers":
 	[
 		{
-			"file": "controllers/home.go",
+			"file": "static/js/manage/updatepassword.js",
 			"settings":
 			{
-				"buffer_size": 511,
+				"buffer_size": 741,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "main.go",
-			"settings":
-			{
-				"buffer_size": 382,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/models.go",
-			"settings":
-			{
-				"buffer_size": 253,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "conf/app.conf",
-			"settings":
-			{
-				"buffer_size": 52,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/index.tpl",
-			"settings":
-			{
-				"buffer_size": 2969,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/includes/header.tpl",
-			"settings":
-			{
-				"buffer_size": 459,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/css/main.css",
-			"settings":
-			{
-				"buffer_size": 596,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/includes/styles.html",
-			"settings":
-			{
-				"buffer_size": 84,
-				"line_ending": "Unix",
-				"name": "<style"
-			}
-		},
-		{
-			"file": "views/includes/js.html",
-			"settings":
-			{
-				"buffer_size": 137,
-				"line_ending": "Unix",
-				"name": "<!-- JS Icludes here -->"
-			}
-		},
-		{
-			"file": "static/js/app.js",
-			"settings":
-			{
-				"buffer_size": 263,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/js/angular.1.5.min.js",
-			"settings":
-			{
-				"buffer_size": 154333,
-				"line_ending": "Unix",
-				"name": "/*"
 			}
 		}
 	],
@@ -159,9 +140,47 @@
 	},
 	"file_history":
 	[
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/angular.1.5.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/models.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/app.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/orders.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/login.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/routers/router.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/index.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/coordinates.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/orders.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/home.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/error.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/js.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/index.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/nav.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/coordinates.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/orders.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/home.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/conf/app.conf",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/app.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/main.css",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/main.go",
+		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/controllers/login.php",
+		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/controllers/admin/home.php",
+		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/libraries/Auth.php",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/coordinates.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/header.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/order.go",
 		"/home/peakhan/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/updatePassword.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/coordinates.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/orders.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/MadFlatters",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/coordinates/add.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/styles.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/js.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/styles.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/header.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/contact/failure.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/contact/success.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/angular.1.5.min.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/angular.1.5.js",
 		"/media/peakhan/New Volume/BAchup/Documents/Khanport/rmacac/application/views/includes/header.php",
 		"/media/peakhan/New Volume/BAchup/Documents/Khanport/rmacac/application/views/default.php",
 		"/home/peakhan/GoWork/src/hello2/views/index.tpl",
@@ -173,13 +192,14 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
+			"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters"
 		]
 	},
 	"find_state":
@@ -187,6 +207,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}\nfavi",
+			"}\n",
+			"		this.submitFail = false;\n",
 			">\n"
 		],
 		"highlight": true,
@@ -205,304 +228,34 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"sheets":
+			[
+			]
+		},
+		{
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "controllers/home.go",
+					"file": "static/js/manage/updatepassword.js",
 					"settings":
 					{
-						"buffer_size": 511,
+						"buffer_size": 741,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								510,
-								510
+								127,
+								127
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Go/Go.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "main.go",
-					"settings":
-					{
-						"buffer_size": 382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								344,
-								344
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Go/Go.tmLanguage"
-						},
-						"translation.x": 8.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "models/models.go",
-					"settings":
-					{
-						"buffer_size": 253,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								113,
-								113
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Go/Go.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "conf/app.conf",
-					"settings":
-					{
-						"buffer_size": 52,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "views/index.tpl",
-					"settings":
-					{
-						"buffer_size": 2969,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								297,
-								297
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
-						},
-						"translation.x": 83.0,
-						"translation.y": 1.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "views/includes/header.tpl",
-					"settings":
-					{
-						"buffer_size": 459,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								180,
-								180
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "static/css/main.css",
-					"settings":
-					{
-						"buffer_size": 596,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								250,
-								250
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 102.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "views/includes/styles.html",
-					"settings":
-					{
-						"buffer_size": 84,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84,
-								84
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<style",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "views/includes/js.html",
-					"settings":
-					{
-						"buffer_size": 137,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								58,
-								58
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<!-- JS Icludes here -->",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "static/js/app.js",
-					"settings":
-					{
-						"buffer_size": 263,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								262,
-								262
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "static/js/angular.1.5.min.js",
-					"settings":
-					{
-						"buffer_size": 154333,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154333,
-								154333
-							]
-						],
-						"settings":
-						{
-							"auto_name": "/*",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -561,6 +314,46 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"hom",
+				"controllers/manage/home.go"
+			],
+			[
+				"oders",
+				"models/orders.go"
+			],
+			[
+				"mode",
+				"models/coordinates.go"
+			],
+			[
+				"model",
+				"models/orders.go"
+			],
+			[
+				"models",
+				"models/models.go"
+			],
+			[
+				"lo",
+				"controllers/login.go"
+			],
+			[
+				"order",
+				"controllers/manage/orders.go"
+			],
+			[
+				"rou",
+				"routers/router.go"
+			],
+			[
+				"ro",
+				"views/error.html"
+			],
+			[
+				"",
+				"controllers/order.go"
+			]
 		],
 		"width": 0.0
 	},
