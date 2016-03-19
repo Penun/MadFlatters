@@ -1,5 +1,6 @@
 body {
 	margin: 0px;
+	background-color: #CCCCCC;
 }
 
 ul {
@@ -8,6 +9,8 @@ ul {
 
 #sidePanel {
 	width: 33%;
+	max-width: 200px;
+	margin-top: 1%;
 	height: auto;
 	display: inline-block;
 }
@@ -17,6 +20,7 @@ ul {
 	border-color: #0000AA;
 	border-width: 5px;
 	padding: 0;
+	margin: 0;
 }
 
 #sidePanel li {
@@ -30,21 +34,29 @@ ul {
 	background: -webkit-radial-gradient(circle, #1595FE, #003095); 
 	background: -o-radial-gradient(circle, #1595FE, #003095); /
 	background: -moz-radial-gradient(circle, #1595FE, #003095); 
-	background: radial-gradient(circle, #1595FE, #003095); 
+	background: radial-gradient(circle, #1595FE, #1575CA, #003095);
+	color: #102020; 
 }
 
 #sidePanel li:active {
 	background: #003095;
-	background: -webkit-radial-gradient(circle, #003095, #1595FE); 
-	background: -o-radial-gradient(circle, #003095, #1595FE); /
-	background: -moz-radial-gradient(circle, #153095, #1595FE); 
-	background: radial-gradient(circle, #1585FB, #0040FB);
+	background: -webkit-radial-gradient(circle, #1585FB, #0040FB); 
+	background: -o-radial-gradient(circle, #1585FB, #0040FB); /
+	background: -moz-radial-gradient(circle, #1585FB, #0040FB); 
+	background: radial-gradient(circle, #1595FE, #0565AC, #003095);
 }
 
 #mainPanel {
 	width: 63%;
+	max-width: 63%;
 	height: auto;
-	display: inline-block;
+	display: inline;
 	position: absolute;
-	margin: 3% 0% 0% 3%;
+	margin-top: 1%;
+	padding: 1%;
+	background-color: #FFFFFF;
+}
+
+p.details {
+	word-wrap: break-word;
 }
