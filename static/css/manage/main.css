@@ -4,41 +4,37 @@ body {
 }
 
 ul {
-	list-style: none;
+	list-style-type: none;
 }
 
-#sidePanel {
-	width: 33%;
-	max-width: 200px;
-	margin-top: 1%;
+#navPanel {
+	width: 100vw;
+	margin-top: 1vh;
 	height: auto;
-	display: inline-block;
 }
 
-#sidePanel ul {
-	border-style: none ridge ridge;
+#navPanel ul {
+	border-style: ridge none ridge none;
 	border-color: #0000AA;
-	border-width: 5px;
+	border-width: 3px;
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
+	top: 0;
 }
 
-#sidePanel li {
-	display: block;
-	padding: 15% 10% 15% 10%;
-	border-style: ridge none none;
-	border-color: #0000AA;
-	border-width: 5px;
-	text-align: center;
+#navPanel li {
+	width: 25vw;
 	background: #1595FE; 
 	background: -webkit-radial-gradient(circle, #1595FE, #003095); 
 	background: -o-radial-gradient(circle, #1595FE, #003095); /
 	background: -moz-radial-gradient(circle, #1595FE, #003095); 
 	background: radial-gradient(circle, #1595FE, #1575CA, #003095);
-	color: #102020; 
+	float: left;
+	font-size: 2vw;
 }
 
-#sidePanel li:active {
+#navPanel li:active {
 	background: #003095;
 	background: -webkit-radial-gradient(circle, #1585FB, #0040FB); 
 	background: -o-radial-gradient(circle, #1585FB, #0040FB); /
@@ -46,14 +42,18 @@ ul {
 	background: radial-gradient(circle, #1595FE, #0565AC, #003095);
 }
 
+#navPanel li a {
+	display: block;
+    text-align: center;
+    padding: 3vh 0 3vh 0;
+    color: #101040;
+    text-decoration: none;
+}
+
 #mainPanel {
-	width: 63%;
-	max-width: 63%;
+	width: 98vw;
 	height: auto;
-	display: inline;
-	position: absolute;
-	margin-top: 1%;
-	padding: 1%;
+	padding: 1vw;
 	background-color: #FFFFFF;
 }
 

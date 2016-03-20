@@ -10,7 +10,7 @@
 			curOrders = {{.Orders}};
 		})();
 	</script>
-	<div id="sidePanel">
+	<div id="navPanel">
 		{{template "manage/includes/nav.html"}}
 	</div>
 	<div id="mainPanel">
