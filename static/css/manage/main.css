@@ -26,9 +26,9 @@ ul {
 #navPanel li {
 	width: 25vw;
 	background: #1595FE; 
-	background: -webkit-radial-gradient(circle, #1595FE, #003095); 
-	background: -o-radial-gradient(circle, #1595FE, #003095); /
-	background: -moz-radial-gradient(circle, #1595FE, #003095); 
+	background: -webkit-radial-gradient(circle, #1595FE, #1575CA, #003095); 
+	background: -o-radial-gradient(circle, #1595FE, #1575CA, #003095); /
+	background: -moz-radial-gradient(circle, #1595FE, #1575CA, #003095); 
 	background: radial-gradient(circle, #1595FE, #1575CA, #003095);
 	float: left;
 	font-size: 2vw;
@@ -36,9 +36,9 @@ ul {
 
 #navPanel li:active {
 	background: #003095;
-	background: -webkit-radial-gradient(circle, #1585FB, #0040FB); 
-	background: -o-radial-gradient(circle, #1585FB, #0040FB); /
-	background: -moz-radial-gradient(circle, #1585FB, #0040FB); 
+	background: -webkit-radial-gradient(circle, #1595FE, #0565AC, #003095); 
+	background: -o-radial-gradient(circle, #1595FE, #0565AC, #003095); /
+	background: -moz-radial-gradient(circle, #1595FE, #0565AC, #003095); 
 	background: radial-gradient(circle, #1595FE, #0565AC, #003095);
 }
 
