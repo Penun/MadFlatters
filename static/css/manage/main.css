@@ -55,6 +55,7 @@ ul {
 	height: auto;
 	padding: 1vw;
 	background-color: #FFFFFF;
+	font-size: 3vh;
 }
 
 p.details {
@@ -65,11 +66,12 @@ button {
 	float: right;
 }
 
-div.oWrapper {
+.oWrapper {
 	min-height: 5vh;
 }
 
-div.order {
+.order {
 	display: inline-block;
-	width: 31vw;
+	width: 40vw;
+	text-align: center;
 }

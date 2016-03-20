@@ -30,7 +30,7 @@
 			<form id="orderForm">
 				<div ng-repeat="order in orders" class="oWrapper">
 					<input type="checkbox" name="selectedOrders[]" value="{{"{{order.or_id}}"}}" ng-model="order.selected" />
-					<div class="order"><b><i>{{"{{order.fullName}}"}}</i></b></div><div class="order"><b>{{"{{order.phone}}"}}</b></div><div class="order"><button type="button" ng-click="ordCont.RevealDetails(order.or_id)">...></button></div><br />
+					<div class="order" ng-click="ordCont.RevealDetails(order.or_id)"><b><i>{{"{{order.fullName}}"}}</i></b></div><div class="order" ng-click="ordCont.RevealDetails(order.or_id)"><b>{{"{{order.phone}}"}}</b></div><br />
 					<p ng-show="order.showDetails" class="details">{{"{{order.details}}"}}</p>
 				</div>
 				<button type="button" ng-click="ordCont.Archive()">Archive Selected</button>
