@@ -60,3 +60,16 @@ ul {
 p.details {
 	word-wrap: break-word;
 }
+
+button {
+	float: right;
+}
+
+div.oWrapper {
+	min-height: 5vh;
+}
+
+div.order {
+	display: inline-block;
+	width: 31vw;
+}
