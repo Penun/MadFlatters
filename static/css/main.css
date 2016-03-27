@@ -50,3 +50,35 @@ body {
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
 }
+
+#loginForm {
+	width: 66%;
+	padding: 1%;
+	float:left;
+	margin: 1vh 16% 0 16%;
+	font-size: 1em;
+}
+
+#loginForm p {
+	width:100%;
+	margin:10px 0;
+	float:left;
+}
+
+#loginForm label {
+	width:35%;
+	margin:0;
+	float:left;
+	font-weight:bold;
+	text-align: right;
+}
+
+#loginForm input {
+	width: 47%;
+	float:left;
+	margin: 0 0 0 1%;
+}
+
+button {
+	float: right;
+}
