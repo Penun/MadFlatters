@@ -45,4 +45,7 @@
 			}
 		};
 	}]);
+	app.controller('ordLenController', function(){
+		this.ordLen = ordLength;
+	});
 })();

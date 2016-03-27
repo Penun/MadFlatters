@@ -19,6 +19,9 @@ func (this *ManageHomeController) Get() {
 		orders := models.GetArchivedOrders(false)
 		this.Data["Orders"] = &orders
 
+		ordLen := len(orders)
+		this.Data["OrdLen"] = ordLen
+
 		this.TplName = "manage/index.tpl"
 	} else {
 		this.Redirect("/login", 302)		

@@ -27,7 +27,7 @@ ul {
 	width: 25vw;
 	background: #1595FE; 
 	background: -webkit-radial-gradient(circle, #1595FE, #1575CA, #003095); 
-	background: -o-radial-gradient(circle, #1595FE, #1575CA, #003095); /
+	background: -o-radial-gradient(circle, #1595FE, #1575CA, #003095);
 	background: -moz-radial-gradient(circle, #1595FE, #1575CA, #003095); 
 	background: radial-gradient(circle, #1595FE, #1575CA, #003095);
 	float: left;
@@ -37,7 +37,7 @@ ul {
 #navPanel li:active {
 	background: #003095;
 	background: -webkit-radial-gradient(circle, #1595FE, #0565AC, #003095); 
-	background: -o-radial-gradient(circle, #1595FE, #0565AC, #003095); /
+	background: -o-radial-gradient(circle, #1595FE, #0565AC, #003095);
 	background: -moz-radial-gradient(circle, #1595FE, #0565AC, #003095); 
 	background: radial-gradient(circle, #1595FE, #0565AC, #003095);
 }
@@ -46,7 +46,7 @@ ul {
 	display: block;
     text-align: center;
     padding: 3vh 0 3vh 0;
-    color: #101040;
+    color: white;
     text-decoration: none;
 }
 
@@ -56,14 +56,11 @@ ul {
 	padding: 1vw;
 	background-color: #FFFFFF;
 	font-size: 3vh;
+	overflow: auto;
 }
 
 p.details {
 	word-wrap: break-word;
-}
-
-button {
-	float: right;
 }
 
 .oWrapper {
@@ -74,4 +71,78 @@ button {
 	display: inline-block;
 	width: 40vw;
 	text-align: center;
+}
+
+.button {
+    background: #1595FE;
+    background: -webkit-radial-gradient(circle, #1595FE, #1575CA, #003095); 
+	background: -o-radial-gradient(circle, #1595FE, #1575CA, #003095); /
+	background: -moz-radial-gradient(circle, #1595FE, #1575CA, #003095); 
+	background: radial-gradient(circle, #1595FE, #1575CA, #003095);
+    border-radius: 20%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+	float: right;
+	font-size: 2vh;
+}
+
+.button:active {
+    background: #003095;
+	background: -webkit-radial-gradient(circle, #1595FE, #0565AC, #003095); 
+	background: -o-radial-gradient(circle, #1595FE, #0565AC, #003095);
+	background: -moz-radial-gradient(circle, #1595FE, #0565AC, #003095); 
+	background: radial-gradient(circle, #1595FE, #0565AC, #003095);
+    color: black;
+}
+
+#passForm {
+	width: 66%;
+	padding: 1%;
+	float:left;
+	border:2px solid #1595FE;
+	margin: 0 16% 0 16%;
+	font-size: 2vh;
+}
+
+#passForm p {
+	width:100%;
+	margin:10px 0;
+	float:left;
+}
+
+#passForm label {
+	width:35%;
+	margin:0;
+	float:left;
+	font-weight:bold;
+	color:#1595FE;
+	text-shadow:1px 1px 0 #000;
+	text-align: right;
+}
+
+#passForm input {
+	width: 47%;
+	float:left;
+	margin: 0 0 0 1%;
+}
+
+#upPassError {
+	width: 68%;
+	margin: 0 16% 0 16%;
+	text-align: center;
+	color: #AA0505;	
+}
+
+#coordTab {
+	text-align: center;
+}
+
+#orderTab {
+	width: 96%;
+	margin: 0 2% 0 2%;
 }

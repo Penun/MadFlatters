@@ -1,6 +1,6 @@
-<ul>
-	<li><a href="#coor" ng-click="tabM.selectTab(1)">Coordinates</a></li>
-	<li><a href="#ord" ng-click="tabM.selectTab(2)">Order/Contacts</a></li>
-	<li><a href="#pass" ng-click="tabM.selectTab(3)">Update Password</a></li>
-	<li><a href="#logu" ng-click="tabM.logOut()">Logout</a></li>
+<ul ng-controller="ordLenController as ordLenC">
+	<li><a href="" ng-click="tabM.selectTab(1)">Coordinates</a></li>
+	<li><a href="" ng-click="tabM.selectTab(2)">Order/Contacts ({{"{{ordLenC.ordLen}}"}})</a></li>
+	<li><a href="" ng-click="tabM.selectTab(3)">Update Password</a></li>
+	<li><a href="" ng-click="tabM.logOut()">Logout</a></li>
 </ul>
