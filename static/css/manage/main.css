@@ -76,7 +76,7 @@ p.details {
 .button {
     background: #1595FE;
     background: -webkit-radial-gradient(circle, #1595FE, #1575CA, #003095); 
-	background: -o-radial-gradient(circle, #1595FE, #1575CA, #003095); /
+	background: -o-radial-gradient(circle, #1595FE, #1575CA, #003095);
 	background: -moz-radial-gradient(circle, #1595FE, #1575CA, #003095); 
 	background: radial-gradient(circle, #1595FE, #1575CA, #003095);
     border-radius: 20%;

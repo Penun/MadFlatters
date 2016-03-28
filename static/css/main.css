@@ -106,7 +106,7 @@ button {
 .button {
 	background: #512b20;
     background: -webkit-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7); 
-	background: -o-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7); /
+	background: -o-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7);
 	background: -moz-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7); 
 	background: radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7);
     border-radius: 75%;
@@ -122,16 +122,16 @@ button {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #783e23;
+    color:    #c79534;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #783e23;
+   color:    #c79534;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #783e23;
+   color:    #c79534;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #783e23;
+   color:    #c79534;
 }
