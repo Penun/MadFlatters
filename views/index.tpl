@@ -11,10 +11,13 @@
 			<div id="map" ng-show="tabM.isSelected(1)"></div>
 			<div id="orders" ng-show="tabM.isSelected(2)">
 				<form id="orderForm" name="orderForm" ng-controller="orderController as ordCont" ng-submit="orderForm.$valid && ordCont.submitOrder()" novalidate>
-					Name: <input type="text" maxlength="50" name="fullName" ng-model="ordCont.order.fullName" required/><br />
-					Phone: <input type="text" pattern="[0-9]{3}" name="phone1" ng-model="ordCont.order.phone1" maxlength="3" required/>-<input type="text" pattern="[0-9]{3}" name="phone2" ng-model="ordCont.order.phone2" maxlength="3" required/>-<input type="text" pattern="[0-9]{4}" name="phone3" ng-model="ordCont.order.phone3" maxlength="4" required/><br />
-					Order/Coment: <textarea name="details" ng-model="ordCont.order.details" required></textarea><br />
-					<input type="submit" name="submit" value="Get In Touch" />
+					<p><label for="">Name:</label><input type="text" maxlength="50" name="fullName" ng-model="ordCont.order.fullName" placeholder="Contact Name" required/></p>
+					<p><label for="">Phone:</label><input type="text" pattern="[0-9]{3}" name="phone1" id="phone1" ng-model="ordCont.order.phone1" maxlength="3" size="3" placeholder="555" required/>-
+						<input type="text" pattern="[0-9]{3}" name="phone2" id="phone2" ng-model="ordCont.order.phone2" maxlength="3" size="3" placeholder="555" required/>-
+						<input type="text" pattern="[0-9]{4}" name="phone3" id="phone3" ng-model="ordCont.order.phone3" maxlength="4" size="4" placeholder="5555" required/></p>
+					<p><label for="">Order/Coment:</label><textarea name="details" ng-model="ordCont.order.details" placeholder="Give us some details of what we can help you with before we give you a call." required></textarea></p>
+					<br />
+					<button type="submit" name="submit" class="button">Get In Touch</button>
 				</form>
 			</div>
 			<script>

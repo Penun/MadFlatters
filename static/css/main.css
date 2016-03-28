@@ -43,6 +43,26 @@ body {
 	background-color: #CCC;
 }
 
+#orders {
+	overflow: auto;
+	background: #DCCCB1;
+	color: #783e23;
+}
+
+#orderForm input, textarea {
+	background: #d5bc8e;
+	color: #783e23;
+}
+
+#phone1, #phone2, #phone3 {
+	width: auto;
+	float: none;
+}
+
+#phone2, #phone3 {
+	margin: 0;
+}
+
 .ng-invalid.ng-dirty {
 	border-color: #FA787E;
 }
@@ -51,7 +71,7 @@ body {
 	border-color: #78FA89;
 }
 
-#loginForm {
+form {
 	width: 66%;
 	padding: 1%;
 	float:left;
@@ -59,13 +79,13 @@ body {
 	font-size: 1em;
 }
 
-#loginForm p {
+form p {
 	width:100%;
 	margin:10px 0;
 	float:left;
 }
 
-#loginForm label {
+form label {
 	width:35%;
 	margin:0;
 	float:left;
@@ -73,7 +93,7 @@ body {
 	text-align: right;
 }
 
-#loginForm input {
+form input, textarea {
 	width: 47%;
 	float:left;
 	margin: 0 0 0 1%;
@@ -81,4 +101,37 @@ body {
 
 button {
 	float: right;
+}
+
+.button {
+	background: #512b20;
+    background: -webkit-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7); 
+	background: -o-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7); /
+	background: -moz-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7); 
+	background: radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7);
+    border-radius: 75%;
+    border: none;
+    color: #D0D0D0;
+    width: 5em;
+    height: 5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+	font-size: 1.25em;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #783e23;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #783e23;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #783e23;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #783e23;
 }
