@@ -1,15 +1,26 @@
-#breadImg {
-	width: 100%;
-	height: auto;
-}
-
 body {
-	/* background-color: #662266; */
+	background-color: #662240;
+	background-image: url('/static/img/temp_bread.png');
+	background-size: 120%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	color: #FFF;
+	width: 100vw;
+	max-width: 1366px;
+	margin: auto;
 }
 
 #mainDiv {
-	width: 87vw;
+	width: 100%;
+}
+
+#contentHolder, #headNav {
+	width: 87%;
 	margin: auto;
+}
+
+#footer, #headNav {
+	height: 10vh;
 }
 
 #headNav ul {
@@ -22,19 +33,20 @@ body {
 
 #headNav ul li {
 	width: 49%;
-	padding-bottom: 20%;
-    height: auto;
+    height: 10vh;
+    color: #46A2A0;
+    text-align: center;
     position:relative;
     display:inline-flex;
-    background-image: url('/static/img/temp_bread.png');
-    background-size: cover;
+}
+
+h1 {
+	margin: auto;
 }
 
 .ratio {
-	width: 100%;
-	padding-bottom: 60%;
+	padding-bottom: 50%;
 	position: relative;
-	
 }
 
 #map {
@@ -45,8 +57,11 @@ body {
 
 #orders {
 	overflow: auto;
+	position: absolute;
 	background: #DCCCB1;
 	color: #783e23;
+	width: 100%;
+	margin: auto;
 }
 
 #orderForm input, textarea {
@@ -74,8 +89,7 @@ body {
 form {
 	width: 66%;
 	padding: 1%;
-	float:left;
-	margin: 1vh 16% 0 16%;
+	margin: 1vh auto 0 auto;
 	font-size: 1em;
 }
 

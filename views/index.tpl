@@ -1,10 +1,10 @@
 {{template "includes/header.tpl"}}
-<body width="device-width" ng-controller="tabManager as tabM">
+<body ng-controller="tabManager as tabM">
 	<div id="mainDiv">
-		<div>
+		<div id="headNav">
 			<ul>
-				<li ng-click="tabM.selectTab(1)">Map</li>
-				<li ng-click="tabM.selectTab(2)">Order</li>
+				<li ng-click="tabM.selectTab(1)"><h1>Map</h1></li>
+				<li ng-click="tabM.selectTab(2)"><h1>Order</h1></li>
 			</ul>
 		</div>
 		<div id="contentHolder" class="ratio">
@@ -28,7 +28,7 @@
 	          			lat: {{.coor.Latitude}},
 	          			lng: {{.coor.Longitude}} 
 	          		}, 
-	          		zoom: 15
+	          		zoom: 14
 	        	});
 	        	map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
 	        	map.set('styles', [
@@ -82,6 +82,7 @@
 	      	</script>
 			<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 		</div>
+		<div id="footer"></div>
 	</div>
 </body>
 </html>
