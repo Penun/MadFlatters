@@ -36,8 +36,8 @@ body {
     height: 10vh;
     color: #46A2A0;
     text-align: center;
-    position:relative;
-    display:inline-flex;
+    position: relative;
+    display: inline-flex;
 }
 
 h1 {
@@ -58,9 +58,15 @@ h1 {
 #orders {
 	overflow: auto;
 	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
 	background: #DCCCB1;
 	color: #783e23;
 	width: 100%;
+	margin: auto;
+}
+
+.sixtySix {
+	width: 66%;
 	margin: auto;
 }
 
@@ -136,16 +142,16 @@ button {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #c79534;
+    color: #c79534;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #c79534;
+   color: #c79534;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #c79534;
+   color: #c79534;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #c79534;
+   color: #c79534;
 }

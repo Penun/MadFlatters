@@ -9,15 +9,18 @@
 		</div>
 		<div id="contentHolder" class="ratio">
 			<div id="map" ng-show="tabM.isSelected(1)"></div>
-			<div id="orders" ng-show="tabM.isSelected(2)">
+			<div id="orders" class="ratio" ng-show="tabM.isSelected(2)">
+				<div class="sixtySix">
+					<h2>Thank you for your interest!</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu tellus tortor. Duis ac convallis nisl. Donec euismod fringilla eros vel dapibus. Nam sed luctus arcu. Pellentesque auctor ac metus vel consectetur. Maecenas vitae diam consectetur, rutrum diam vel, aliquet libero. Ut ac nibh imperdiet, ullamcorper nisl sed, malesuada metus. Sed lobortis ultrices congue. Praesent dignissim porta sagittis. Phasellus sit amet sollicitudin leo. Nullam id nibh nec felis tempus blandit a et neque. Donec lobortis consequat nisi, at cursus nisl placerat ac.</p>
+				</div>
 				<form id="orderForm" name="orderForm" ng-controller="orderController as ordCont" ng-submit="orderForm.$valid && ordCont.submitOrder()" novalidate>
 					<p><label for="">Name:</label><input type="text" maxlength="50" name="fullName" ng-model="ordCont.order.fullName" placeholder="Contact Name" required/></p>
 					<p><label for="">Phone:</label><input type="text" pattern="[0-9]{3}" name="phone1" id="phone1" ng-model="ordCont.order.phone1" maxlength="3" size="3" placeholder="555" required/>-
 						<input type="text" pattern="[0-9]{3}" name="phone2" id="phone2" ng-model="ordCont.order.phone2" maxlength="3" size="3" placeholder="555" required/>-
 						<input type="text" pattern="[0-9]{4}" name="phone3" id="phone3" ng-model="ordCont.order.phone3" maxlength="4" size="4" placeholder="5555" required/></p>
-					<p><label for="">Order/Coment:</label><textarea name="details" ng-model="ordCont.order.details" placeholder="Give us some details of what we can help you with before we give you a call." required></textarea></p>
-					<br />
-					<button type="submit" name="submit" class="button">Get In Touch</button>
+					<p><label for="">Order/Comment:</label><textarea name="details" ng-model="ordCont.order.details" placeholder="Give us some details of what we can help you with before we give you a call." required></textarea></p>
+					<p><button type="submit" name="submit" class="button">Get In Touch</button></p>
 				</form>
 			</div>
 			<script>
