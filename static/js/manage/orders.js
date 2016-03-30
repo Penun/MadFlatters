@@ -19,19 +19,21 @@
 				var ordObj = JSON.parse(ordSt);
 				arOrders.push(ordObj);
 			}
-			$http.post('/manage/orders', arOrders).success(function(data){
-				if (data.success) {
-					for (var i = 0; i < $scope.activeOrders.length; i++){
-						for (var j = 0; j < $scope.orders.length; j++){
-							if ($scope.activeOrders[i] == $scope.orders[j].or_id){
-								$scope.orders.splice(j, 1);
+			if (arOrders.length > 0) {
+				$http.post('/manage/orders', arOrders).success(function(data){
+					if (data.success) {
+						for (var i = 0; i < $scope.activeOrders.length; i++){
+							for (var j = 0; j < $scope.orders.length; j++){
+								if ($scope.activeOrders[i] == $scope.orders[j].or_id){
+									$scope.orders.splice(j, 1);
+								}
 							}
 						}
+					} else {
+						console.log(data.error);
 					}
-				} else {
-					console.log(data.error);
-				}
-			});
+				});
+			}
 		};
 		this.RevealDetails = function(or_id){
 			for (var i = 0; i < $scope.orders.length; i++){

@@ -21,10 +21,19 @@ func (this *OrdersController) Post() {
 		var orders []models.Orders
 		err := json.Unmarshal(this.Ctx.Input.RequestBody, &orders)
 
-		upSuc := models.ArchiveOrders(orders)
-		
+		var upSuc bool
+
+		if len(orders) > 0 {
+			upSuc = models.ArchiveOrders(orders)
+		} else {
+			upSuc = false
+		}
+
 		if err != nil || !upSuc {
-			response := ArchiveResponse{Success: false, Error: err.Error()}
+			response := ArchiveResponse{Success: false, Error: ""}
+			if err != nil {
+				response.Error = err.Error()
+			}
 			this.Data["json"] = &response
 		} else {
 			response := ArchiveResponse{Success: true, Error: ""}
