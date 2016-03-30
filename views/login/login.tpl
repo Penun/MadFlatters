@@ -1,5 +1,5 @@
-{{template "login/includes/header.tpl"}}
-<body>
+{{template "includes/header.tpl"}}
+<body width="device-width">
 	<div ng-controller="loginController as logCont">
 		<div ng-show="logCont.loginFailed">Login Failed</div>
 		<form id="loginForm" name="loginForm" ng-submit="loginForm.$valid && logCont.tryLogin()" novalidate>
