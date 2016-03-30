@@ -9,6 +9,11 @@ type ManageHomeController struct {
 	beego.Controller
 }
 
+type UpdateResponse struct {
+	Success bool `json:"success"`
+	Error string `json:"error"`
+}
+
 func (this *ManageHomeController) Get() {
 	user := this.GetSession("user")
 	if user != nil {

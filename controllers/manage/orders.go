@@ -10,11 +10,6 @@ type OrdersController struct {
 	beego.Controller
 }
 
-type ArchiveResponse struct {
-	Success bool `json:"success"`
-	Error string `json:"error"`
-}
-
 func (this *OrdersController) Post() {
 	user := this.GetSession("user")
 	if user != nil {
@@ -30,13 +25,13 @@ func (this *OrdersController) Post() {
 		}
 
 		if err != nil || !upSuc {
-			response := ArchiveResponse{Success: false, Error: ""}
+			response := UpdateResponse{Success: false, Error: ""}
 			if err != nil {
 				response.Error = err.Error()
 			}
 			this.Data["json"] = &response
 		} else {
-			response := ArchiveResponse{Success: true, Error: ""}
+			response := UpdateResponse{Success: true, Error: ""}
 			this.Data["json"] = &response
 		}
 		this.ServeJSON()

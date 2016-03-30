@@ -13,11 +13,6 @@ type LoginController struct {
 	beego.Controller
 }
 
-type LoginResponse struct {
-	Success bool `json:"success"`
-	Error string `json:"error"`
-}
-
 func (this *LoginController) Get() {
 	user := this.GetSession("user")
 	if user != nil {
@@ -35,7 +30,7 @@ func (this *LoginController) Post() {
 		err := json.Unmarshal(this.Ctx.Input.RequestBody, &manager)
 
 		if err != nil {
-			response := LoginResponse{Success: false, Error: err.Error()}
+			response := UpdateResponse{Success: false, Error: err.Error()}
 			this.Data["json"] = &response
 		} else {
 			hasher := sha1.New()
@@ -43,7 +38,7 @@ func (this *LoginController) Post() {
 			io.WriteString(hasher, beego.AppConfig.String("salt"))
 			manager.Password = base64.URLEncoding.EncodeToString(hasher.Sum(nil))
 			success := models.TryLogin(&manager)
-			response := LoginResponse{Success: success, Error: ""}
+			response := UpdateResponse{Success: success, Error: ""}
 			if success {
 				this.SetSession("user", manager)
 			} else {

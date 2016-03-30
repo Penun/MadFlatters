@@ -11,11 +11,6 @@ type CoordinatesController struct {
 	beego.Controller
 }
 
-type UpdateResponse struct {
-	Success bool `json:"success"`
-	Error string `json:"error"`
-}
-
 func (this *CoordinatesController) Post() {
 	user := this.GetSession("user");
 	if user != nil {
