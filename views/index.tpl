@@ -29,9 +29,11 @@
 	    		var map = new google.maps.Map(mapDiv, {
 	          		center: {
 	          			lat: {{.coor.Latitude}},
-	          			lng: {{.coor.Longitude}} 
+	          			lng: {{.coor.Longitude}}
 	          		}, 
-	          		zoom: 14
+	          		zoom: 14,
+	          		disableDefaultUI: true,
+	          		streetViewControl: true
 	        	});
 	        	map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
 	        	map.set('styles', [
@@ -81,7 +83,34 @@
 	      				"stylers": [{"hue": "#673e2f"}]
 	  				}
 				]);
-	     	}
+				var image1 = new google.maps.MarkerImage("http://192.168.0.3:8080/static/img/icon-foodtruck.png",
+						null,
+						null,
+						null,
+						new google.maps.Size(25, 25)
+				);
+				var marker1 = new google.maps.Marker({
+					map: map,
+					animation: google.maps.Animation.BOUNCE,
+					position: {
+						lat: {{.coor.Latitude}},
+						lng: {{.coor.Longitude}}},
+					icon: image1
+				});
+				var image2 = new google.maps.MarkerImage("http://192.168.0.3:8080/static/img/shadow.png",
+						null,
+						null,
+						new google.maps.Point(12.5, 12.5),
+						new google.maps.Size(25, 25)
+				);
+				var marker2 = new google.maps.Marker({
+					map: map,
+					position: {
+						lat: {{.coor.Latitude}},
+						lng: {{.coor.Longitude}}},
+					icon: image2
+  				});
+			}
 	      	</script>
 			<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 		</div>
