@@ -70,7 +70,9 @@ p.details {
 .order {
 	display: inline-block;
 	width: 40vw;
+	max-width: 40vw;
 	text-align: center;
+	word-wrap: break-word;
 }
 
 .button {
@@ -88,7 +90,7 @@ p.details {
     display: inline-block;
     margin: 4px 2px;
 	float: right;
-	font-size: 2vh;
+	font-size: .9em;
 }
 
 .button:active {
@@ -106,7 +108,7 @@ p.details {
 	float:left;
 	border:2px solid #1595FE;
 	margin: 0 16% 0 16%;
-	font-size: 2vh;
+	font-size: .75em;
 }
 
 #passForm p {

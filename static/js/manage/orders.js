@@ -47,7 +47,7 @@
 			}
 		};
 	}]);
-	app.controller('ordLenController', function(){
+	app.controller('ordLenController', ['$scope', function($scope){
 		this.ordLen = ordLength;
-	});
+	}]);
 })();
