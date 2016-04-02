@@ -1,14 +1,14 @@
 {{template "manage/includes/header.tpl"}}
 <body width="device-width" ng-controller="tabManager as tabM">
 	<script type="text/javascript">
-		(function(){
+		(function(){	
 			curCoord = {
 				Latitude: {{.Coor.Latitude}},
 				Longitude: {{.Coor.Longitude}},
 				cuCoordSet: {{.Found}}
 			};
 			curOrders = {{.Orders}};
-			ordLength = {{.OrdLen}}; 
+			ordLength = {{.OrdLen}};
 		})();
 	</script>
 	<div id="navPanel">
