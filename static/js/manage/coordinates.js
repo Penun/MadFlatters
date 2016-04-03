@@ -19,6 +19,8 @@
 			$scope.$apply();
 		};
 		this.UpdateLocation = function(){
+			this.nCoord.Latitude = Math.round(this.nCoord.Latitude*10000000)/10000000;
+			this.nCoord.Longitude = Math.round(this.nCoord.Longitude*10000000)/10000000;
 			$http.post("/manage/coordinates", this.nCoord).success(function(data){
 				if (data.success){
 					curCoord.Latitude = newCoord.Latitude;

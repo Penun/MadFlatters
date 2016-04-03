@@ -13,19 +13,25 @@ type CoordinatesController struct {
 
 func (this *CoordinatesController) Post() {
 	user := this.GetSession("user");
+	response := UpdateResponse{Success: false, Error: ""}
+
 	if user != nil {
 		coor := models.Coordinates{C_id: 1, Occurence: time.Now()}
 		err := json.Unmarshal(this.Ctx.Input.RequestBody, &coor)
-		upSuc := models.UpdateCoordinates(coor)
-		if err != nil || !upSuc {
-			response := UpdateResponse{Success: false, Error: err.Error()}
-			this.Data["json"] = &response
+		if err == nil {	
+			upSuc := models.UpdateCoordinates(coor)
+			if upSuc {
+				response.Success = true	
+			} else {
+				response.Error = "Failed To Save"				
+			}
 		} else {
-			response := UpdateResponse{Success: true, Error: ""}
-			this.Data["json"] = &response	
+			response.Error = err.Error()
 		}
-		this.ServeJSON()
 	} else {
-		this.TplName = "error.html"		
+		response.Error = "Who are YOU!?"
 	}
+
+	this.Data["json"] = &response
+	this.ServeJSON()
 }
