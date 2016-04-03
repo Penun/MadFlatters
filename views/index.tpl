@@ -12,7 +12,9 @@
 			<div id="orders" class="ratio" ng-show="tabM.isSelected(2)">
 				<div class="sixtySix">
 					<h2>Thank you for your interest!</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu tellus tortor. Duis ac convallis nisl. Donec euismod fringilla eros vel dapibus. Nam sed luctus arcu. Pellentesque auctor ac metus vel consectetur. Maecenas vitae diam consectetur, rutrum diam vel, aliquet libero. Ut ac nibh imperdiet, ullamcorper nisl sed, malesuada metus. Sed lobortis ultrices congue. Praesent dignissim porta sagittis. Phasellus sit amet sollicitudin leo. Nullam id nibh nec felis tempus blandit a et neque. Donec lobortis consequat nisi, at cursus nisl placerat ac.</p>
+					<p>Here you can get in contact us directly. Just select order for an advance large order or select contact if you just have something you need say.</p>
+					<p>This is where you can place bulk orders in advance. Just give us a name, a phone number we can contact you at, and a brief description of what we might help you with.</p>
+					<p>Here you can leave us your comments, concerns, etc. Just fill out the form including your name, email, and message.</p>
 				</div>
 				<form id="orderForm" name="orderForm" ng-controller="orderController as ordCont" ng-submit="orderForm.$valid && ordCont.submitOrder()" novalidate>
 					<p><label for="">Name:</label><input type="text" maxlength="50" name="fullName" ng-model="ordCont.order.fullName" placeholder="Contact Name" required/></p>

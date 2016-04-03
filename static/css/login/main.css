@@ -6,13 +6,19 @@ body {
 	margin: auto;
 }
 
-
 .ng-invalid.ng-dirty {
 	border-color: #FA787E;
 }
 
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
+}
+
+#loginFailed {
+	width: 66%;
+	margin: auto;
+	color: #0080FF;
+	text-align: center;
 }
 
 form {
