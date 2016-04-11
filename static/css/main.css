@@ -7,17 +7,23 @@ body {
 }
 
 #animDiv {
-	width: 130%;
-	height: auto;
+	width: 100vw;
+	max-width: 1366px;
+	height: 100vw;
+	max-height: 1366px;
+	margin: auto;
 	background-image: url("/static/img/temp_bread.png");
+	background-size: 100%;
 	background-repeat: no-repeat;
-	margin-left: -15%;
+	position: absolute;
+	transform: scale3d(0.5, 0.5, 0.5) translateY(-25vw);
+	transform-style: preserve-3d;
 }
 
 #mainDiv {
 	width: 90%;
 	max-width: 90vw;
-	margin: auto;
+	margin: 13vw auto auto auto;
 }
 
 #backImg {
