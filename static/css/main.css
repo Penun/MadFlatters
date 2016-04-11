@@ -1,17 +1,32 @@
 body {
 	background-color: #662240;
-	background-image: url('/static/img/temp_bread.png');
-	background-size: 120%;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
 	color: #FFF;
 	width: 100vw;
 	max-width: 1366px;
 	margin: auto;
 }
 
+#animDiv {
+	width: 130%;
+	height: auto;
+	background-image: url("/static/img/temp_bread.png");
+	background-repeat: no-repeat;
+	margin-left: -15%;
+}
+
 #mainDiv {
+	width: 90%;
+	max-width: 90vw;
+	margin: auto;
+}
+
+#backImg {
+	left: 50%;
+	margin-top: -15%;
+	margin-left: -50%;
 	width: 100%;
+	height: auto;
+	position: absolute;
 }
 
 #contentHolder, #headNav {

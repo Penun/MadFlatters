@@ -4,9 +4,13 @@
 		this.tab = 1;
 		this.selectTab = function(newTab){
 			this.tab = newTab;
+			this.flipAnim();
 		};
 		this.isSelected = function(checkT){
 			return this.tab === checkT;
+		};
+		this.flipAnim = function(){
+
 		};
 	});
 	app.controller('orderController', [ '$http', function($http){

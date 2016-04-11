@@ -4,8 +4,92 @@
 		"selected_items":
 		[
 			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"o",
+				"overflow"
+			],
+			[
+				"fl",
+				"flipAnim"
+			],
+			[
+				"ordL",
+				"ordLength"
+			],
+			[
+				"oder",
+				"orderLength"
+			],
+			[
+				"order",
+				"orderLength"
+			],
+			[
+				"ordLen",
+				"ordLength"
+			],
+			[
+				"u",
+				"upSuc"
+			],
+			[
+				"ord",
+				"ordLength"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"inline",
+				"inline"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"border-wid",
+				"border-width"
+			],
+			[
 				"pa",
-				"passSet"
+				"padding"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"p",
+				"padding-top"
 			],
 			[
 				"in",
@@ -14,14 +98,6 @@
 			[
 				"bt",
 				"button	Tag"
-			],
-			[
-				"order",
-				"orders"
-			],
-			[
-				"o",
-				"ordObj"
 			],
 			[
 				"a",
@@ -72,20 +148,12 @@
 				"FName"
 			],
 			[
-				"back",
-				"background-size"
-			],
-			[
 				"li",
 				"list-style"
 			],
 			[
 				"tab",
 				"tab2Loaded"
-			],
-			[
-				"margin",
-				"margin"
 			],
 			[
 				"pos",
@@ -108,10 +176,18 @@
 	"buffers":
 	[
 		{
-			"file": "static/js/manage/updatepassword.js",
+			"file": "static/css/main.css",
 			"settings":
 			{
-				"buffer_size": 741,
+				"buffer_size": 2467,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/js/app.js",
+			"settings":
+			{
+				"buffer_size": 835,
 				"line_ending": "Unix"
 			}
 		}
@@ -140,40 +216,50 @@
 	},
 	"file_history":
 	[
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/models.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/app.js",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/orders.js",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/login.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/routers/router.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/index.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/orders.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/index.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/orders.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/coordinates.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/updatepassword.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/nav.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/app.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/coordinates.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/login.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/main.css",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/manage/main.css",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/home.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/order.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/home.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/login.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/app.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/login/app.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/styles.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/js.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/header.tpl",
+		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/css/text.css",
+		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/views/includes/styles.php",
+		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/views/includes/form.php",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/styles.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/models.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/routers/router.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/coordinates.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/orders.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/home.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/error.html",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/js.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/index.tpl",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login.tpl",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/nav.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/coordinates.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/orders.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/home.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/conf/app.conf",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/app.js",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/main.css",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/main.go",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/controllers/login.php",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/controllers/admin/home.php",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/libraries/Auth.php",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/coordinates.js",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/header.tpl",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/order.go",
 		"/home/peakhan/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/updatePassword.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/coordinates.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/orders.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/MadFlatters",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/coordinates/add.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/styles.html",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/js.html",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/styles.html",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/header.tpl",
@@ -207,6 +293,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"25",
+			";\n",
+			"%;\n",
+			"orderLength",
+			"flatterM-setup",
 			"}\nfavi",
 			"}\n",
 			"		this.submitFail = false;\n",
@@ -228,8 +319,35 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "static/css/main.css",
+					"settings":
+					{
+						"buffer_size": 2467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								286,
+								286
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
@@ -237,19 +355,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 0,
-					"file": "static/js/manage/updatepassword.js",
+					"buffer": 1,
+					"file": "static/js/app.js",
 					"settings":
 					{
-						"buffer_size": 741,
+						"buffer_size": 835,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								127,
-								127
+								432,
+								432
 							]
 						],
 						"settings":
@@ -368,7 +486,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true
 }
