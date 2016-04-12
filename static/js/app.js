@@ -6,7 +6,7 @@
 			LIFT: 'LIFT_STATE',
 			ROTATE: 'ROTATE_STATE',
 			DROP: 'DROP_STATE',
-			END: 'ENS_STATE'
+			END: 'END_STATE'
 		}
 	});
 	app.controller('tabManager', ['$scope', 'Constants', function($scope, Constants){
@@ -18,6 +18,7 @@
 		$scope.curDeg = 0;
 		$scope.flipOut = true;
 		$scope.AnimState = Constants.FlipAnimStates.PRE;
+		$scope.animCycles = 0;
 		$scope.flipRight = true;
 		$scope.interval = null;
 
@@ -28,7 +29,7 @@
 		}
 
 		this.selectTab = function(newTab){
-			if (this.tab != newTab){
+			if (this.tab != newTab && $scope.AnimState == Constants.FlipAnimStates.PRE){
 				this.tab = newTab;
 				$scope.interval = setInterval(this.flipAnim, 60);
 			}
@@ -37,46 +38,66 @@
 			return this.tab === checkT;
 		};
 		this.flipAnim = function(){
-			if ($scope.flipOut){
-				$scope.curScale -= 0.05;
-				$scope.curTransY += 1.5;
-				if ($scope.flipRight){
-					$scope.curDeg += 9;
-					if ($scope.cappedWidth){
-						$scope.curTransX -= 68.3;
+			switch ($scope.AnimState){
+				case Constants.FlipAnimStates.PRE:
+					$scope.AnimState = Constants.FlipAnimStates.LIFT;
+				break;
+				case Constants.FlipAnimStates.LIFT:
+					if ($scope.animCycles < 5){
+						$scope.curScale -= 0.05;
+						$scope.curTransY += 1.5;
+						if ($scope.flipRight){
+							if ($scope.cappedWidth){
+								$scope.curTransX -= 136.6;
+							} else {
+								$scope.curTransX -= 10;
+							}
+						} 
+						$scope.animCycles++;
 					} else {
-						$scope.curTransX -= 5;
+						$scope.AnimState = Constants.FlipAnimStates.ROTATE;
 					}
-				} else {
-					$scope.curDeg -= 9;
-					if ($scope.cappedWidth){
-						$scope.curTransX += 68.3;
+				break;
+				case Constants.FlipAnimStates.ROTATE:
+					if ($scope.animCycles < 15){
+						if ($scope.flipRight){
+							$scope.curDeg += 18;
+						} else {
+							$scope.curDeg -= 18;
+						}
+						if ($scope.animCycles < 10){
+							$scope.curScale -= 0.05;
+							$scope.curTransY += 1.5;
+							if ($scope.flipRight){
+								if ($scope.cappedWidth){
+									$scope.curTransX -= 136.6;
+								} else {
+									$scope.curTransX -= 10;
+								}
+							} 
+						}
+						$scope.animCycles++;
 					} else {
-						$scope.curTransX += 5;
+						$scope.AnimState = Constants.FlipAnimStates.DROP;
 					}
-				}
-				if ($scope.curScale <= 0.5){
-					$scope.flipOut = false;
-				}
-			} else {
-				$scope.curScale += 0.05;
-				$scope.curTransY -= 1.5;
-				if ($scope.flipRight){
-					$scope.curDeg += 9;
-					if ($scope.cappedWidth){
-						$scope.curTransX -= 68.3;
+				break;
+				case Constants.FlipAnimStates.DROP:
+					if ($scope.animCycles < 25){
+						$scope.curScale += 0.05;
+						$scope.curTransY -= 1.5;
+						if (!$scope.flipRight){
+							if ($scope.cappedWidth){
+								$scope.curTransX += 136.6;
+							} else {
+								$scope.curTransX += 10;
+							}
+						}
+						$scope.animCycles++;
 					} else {
-						$scope.curTransX -= 5;
+						$scope.AnimState = Constants.FlipAnimStates.END;
 					}
-				} else {
-					$scope.curDeg -= 9;
-					if ($scope.cappedWidth){
-						$scope.curTransX += 68.3;
-					} else {
-						$scope.curTransX += 5;
-					}
-				}
-				if ($scope.curScale >= 1){
+				break;
+				case Constants.FlipAnimStates.END:
 					$scope.curScale = 1;
 					$scope.curTransY = 0;
 					if ($scope.flipRight){
@@ -84,17 +105,21 @@
 						$scope.flipRight = false;
 						if ($scope.cappedWidth){
 							$scope.curTransX = -1366;
+						} else {
+							$scope.curTransX = -100; 
 						}
 					} else {
 						$scope.curDeg = 0;
 						$scope.flipRight = true;
-						if ($scope.cappedWidth){
-							$scope.curTransX = 0;
-						}
+						$scope.curTransX = 0;
 					}
 					$scope.flipOut = true;
+					$scope.AnimState = Constants.FlipAnimStates.PRE;
+					$scope.animCycles = 0;
 					clearInterval($scope.interval);
-				}
+				break;
+				default:
+				break;
 			}
 
 			if ($scope.cappedWidth){
