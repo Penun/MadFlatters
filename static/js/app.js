@@ -1,6 +1,15 @@
 (function(){
-	var app = angular.module('flatter', []);
-	app.controller('tabManager', ['$scope', function($scope){
+	var app = angular.module('flatter', ['flatter-orders']);
+	app.constant('Constants', {
+		FlipAnimStates: {
+			PRE: 'PRE_STATE',
+			LIFT: 'LIFT_STATE',
+			ROTATE: 'ROTATE_STATE',
+			DROP: 'DROP_STATE',
+			END: 'ENS_STATE'
+		}
+	});
+	app.controller('tabManager', ['$scope', 'Constants', function($scope, Constants){
 		this.tab = 1;
 		$scope.animDiv = document.getElementById("animDiv");
 		$scope.curScale = 1;
@@ -8,6 +17,7 @@
 		$scope.curTransX = 0;
 		$scope.curDeg = 0;
 		$scope.flipOut = true;
+		$scope.AnimState = Constants.FlipAnimStates.PRE;
 		$scope.flipRight = true;
 		$scope.interval = null;
 
@@ -92,23 +102,6 @@
 			} else {
 				$scope.animDiv.style.transform = "scale3d(" + $scope.curScale + ", " + $scope.curScale + ", 1) translate3d(" + $scope.curTransX + "vw, -" + $scope.curTransY + "vw, 0) rotateY(" + $scope.curDeg + "deg)";
 			}
-		};
-	}]);
-	app.controller('orderController', [ '$http', function($http){
-		this.order = {};
-		this.submitOrder = function(){
-			var sendData = {};
-			sendData.fullName = this.order.fullName;
-			sendData.phone = this.order.phone1 + '-' + this.order.phone2 + '-' + this.order.phone3
-			sendData.details = this.order.details;
-			$http.post('/contact', sendData).success(function(data){
-				if (data.success){
-					// Needs confirm message swap
-				} else {
-					console.log(data.error);
-				}
-			});
-			this.order = {};
 		};
 	}]);
 })();
