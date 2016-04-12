@@ -17,6 +17,7 @@ body {
 	background-repeat: no-repeat;
 	position: absolute;
 	transform-style: preserve-3d;
+	transform-origin: 100% 50%;
 }
 
 #mainDiv {
