@@ -11,16 +11,23 @@
 	});
 	app.controller('tabManager', ['$scope', 'Constants', function($scope, Constants){
 		$scope.tab = 0;
+		$scope.pendTab = 1;
 		$scope.animDiv = document.getElementById("animDiv");
+		$scope.targetIn = document.getElementById("bImg");
+		$scope.targetOut = document.getElementById("bImgRev");
 		$scope.curScale = 1;
 		$scope.curTransY = 0;
 		$scope.curTransX = 0;
 		$scope.curDeg = 0;
 		$scope.flipOut = true;
 		$scope.AnimState = Constants.FlipAnimStates.PRE;
-		$scope.animCycles = 0;
+		$scope.flipAnimCyc = 0;
+		$scope.fadeInAnimCyc = 0;
+		$scope.fadeOutAnimCyc = 0;
 		$scope.flipRight = true;
-		$scope.interval = null;
+		$scope.intervalFlip = null;
+		$scope.intervalFadeIn = null;
+		$scope.intervalFadeOut = null;
 
 		if (document.documentElement.clientWidth >= 1366){
 			$scope.cappedWidth = true;
@@ -30,8 +37,9 @@
 
 		this.selectTab = function(newTab){
 			if ($scope.tab != newTab && $scope.AnimState == Constants.FlipAnimStates.PRE){
-				$scope.tab = newTab;
-				$scope.interval = setInterval(this.flipAnim, 60);
+				$scope.tab = 0;
+				$scope.pendTab = newTab;
+				$scope.intervalFlip = setInterval(this.flipAnim, 60);
 			}
 		};
 		this.isSelected = function(checkT){
@@ -44,7 +52,7 @@
 					$scope.AnimState = Constants.FlipAnimStates.LIFT;
 				break;
 				case Constants.FlipAnimStates.LIFT:
-					if ($scope.animCycles < 5){
+					if ($scope.flipAnimCyc < 5){
 						$scope.curScale -= 0.05;
 						$scope.curTransY += 1.5;
 						if ($scope.flipRight){
@@ -54,19 +62,19 @@
 								$scope.curTransX -= 10;
 							}
 						} 
-						$scope.animCycles++;
+						$scope.flipAnimCyc++;
 					} else {
 						$scope.AnimState = Constants.FlipAnimStates.ROTATE;
 					}
 				break;
 				case Constants.FlipAnimStates.ROTATE:
-					if ($scope.animCycles < 15){
+					if ($scope.flipAnimCyc < 15){
 						if ($scope.flipRight){
 							$scope.curDeg += 18;
 						} else {
 							$scope.curDeg -= 18;
 						}
-						if ($scope.animCycles < 10){
+						if ($scope.flipAnimCyc < 10){
 							$scope.curScale -= 0.05;
 							$scope.curTransY += 1.5;
 							if ($scope.flipRight){
@@ -77,13 +85,13 @@
 								}
 							} 
 						}
-						$scope.animCycles++;
+						$scope.flipAnimCyc++;
 					} else {
 						$scope.AnimState = Constants.FlipAnimStates.DROP;
 					}
 				break;
 				case Constants.FlipAnimStates.DROP:
-					if ($scope.animCycles < 25){
+					if ($scope.flipAnimCyc < 25){
 						$scope.curScale += 0.05;
 						$scope.curTransY -= 1.5;
 						if (!$scope.flipRight){
@@ -93,7 +101,7 @@
 								$scope.curTransX += 10;
 							}
 						}
-						$scope.animCycles++;
+						$scope.flipAnimCyc++;
 					} else {
 						$scope.AnimState = Constants.FlipAnimStates.END;
 					}
@@ -116,8 +124,13 @@
 					}
 					$scope.flipOut = true;
 					$scope.AnimState = Constants.FlipAnimStates.PRE;
-					$scope.animCycles = 0;
-					clearInterval($scope.interval);
+					$scope.flipAnimCyc = 0;
+					var swapZInd = $scope.targetIn.style.zIndex;
+					$scope.targetOut.style.zIndex = swapZInd;
+					swapZInd *= -1;
+					$scope.targetIn.style.zIndex = swapZInd;
+					$scope.triggerFadeIn();
+					clearInterval($scope.intervalFlip);
 				break;
 				default:
 				break;
@@ -130,12 +143,40 @@
 			}
 		};
 
-		$scope.triggerFade = function(){
-			$scope.tab = 1;
+		$scope.fadeOutAnim = function(){
+			clearInterval($scope.intervalFadeOut);
 		};
-		$scope.fadeAnim = function(){
+		$scope.triggerFadeOut = function(){
+			$scope.intervalFadeOut = setInterval($scope.fadeOutAnim, 50);
+		};
 
+		$scope.fadeInAnim = function(){
+			if ($scope.fadeInAnimCyc < 10){
+				if ($scope.fadeInAnimCyc == 0){
+					$scope.tab = $scope.pendTab;
+					$scope.pendTab = 0;
+
+					$scope.$apply();
+				}
+				var opacity = 1 - (($scope.fadeInAnimCyc + 1) * .1);
+				$scope.targetIn.style.opacity = opacity;
+				$scope.fadeInAnimCyc++;
+			} else {
+				clearInterval($scope.intervalFadeIn);
+
+				$scope.targetIn.style.visibility = "hidden";
+				$scope.targetOut.style.visibility = "visible";
+				$scope.fadeInAnimCyc = 0;
+				var swapTarget = $scope.targetOut;
+				$scope.targetOut = $scope.targetIn;
+				$scope.targetIn = swapTarget;
+				$scope.targetIn.style.opacity = 1;
+				$scope.targetOut.style.opacity = 0;
+			}
 		};
-		$scope.triggerFade();
+		$scope.triggerFadeIn = function(){
+			$scope.intervalFadeIn = setInterval($scope.fadeInAnim, 100);
+		};
+		$scope.triggerFadeIn();
 	}]);
 })();

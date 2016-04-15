@@ -38,13 +38,10 @@ body {
 	z-index: -1;
 }
 
-#backImg {
+.backImg {
 	width: 100%;
 	height: auto;
 	position: absolute;
-	z-index: 2;
-	opacity: 0.5;
-	visibility: hidden;
 }
 
 .contentHolder, .headNav {

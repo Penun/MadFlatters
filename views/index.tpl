@@ -1,7 +1,8 @@
 {{template "includes/header.tpl"}}
 <body ng-controller="tabManager as tabM">
 	<div id="animDiv">
-		<img src="/static/img/temp_bread.png" id="backImg" />
+		<img src="/static/img/temp_bread.png" class="backImg" id="bImg" style="z-index: 2;" />
+		<img src="/static/img/temp_bread.png" class="backImg" id="bImgRev" style="z-index: -2;" />
 		<div class="mainDiv" id="forwardMain" ng-show="tabM.isSelected(1)">
 			<div class="headNav">
 				<ul>
