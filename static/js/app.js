@@ -10,7 +10,7 @@
 		}
 	});
 	app.controller('tabManager', ['$scope', 'Constants', function($scope, Constants){
-		this.tab = 1;
+		$scope.tab = 0;
 		$scope.animDiv = document.getElementById("animDiv");
 		$scope.curScale = 1;
 		$scope.curTransY = 0;
@@ -29,14 +29,15 @@
 		}
 
 		this.selectTab = function(newTab){
-			if (this.tab != newTab && $scope.AnimState == Constants.FlipAnimStates.PRE){
-				this.tab = newTab;
+			if ($scope.tab != newTab && $scope.AnimState == Constants.FlipAnimStates.PRE){
+				$scope.tab = newTab;
 				$scope.interval = setInterval(this.flipAnim, 60);
 			}
 		};
 		this.isSelected = function(checkT){
-			return this.tab === checkT;
+			return $scope.tab === checkT;
 		};
+
 		this.flipAnim = function(){
 			switch ($scope.AnimState){
 				case Constants.FlipAnimStates.PRE:
@@ -128,5 +129,13 @@
 				$scope.animDiv.style.transform = "scale3d(" + $scope.curScale + ", " + $scope.curScale + ", 1) translate3d(" + $scope.curTransX + "vw, -" + $scope.curTransY + "vw, 0) rotateY(" + $scope.curDeg + "deg)";
 			}
 		};
+
+		$scope.triggerFade = function(){
+			$scope.tab = 1;
+		};
+		$scope.fadeAnim = function(){
+
+		};
+		$scope.triggerFade();
 	}]);
 })();

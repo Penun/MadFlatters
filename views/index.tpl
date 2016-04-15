@@ -1,16 +1,28 @@
 {{template "includes/header.tpl"}}
 <body ng-controller="tabManager as tabM">
 	<div id="animDiv">
-		<div id="mainDiv">
-			<div id="headNav">
+		<img src="/static/img/temp_bread.png" id="backImg" />
+		<div class="mainDiv" id="forwardMain" ng-show="tabM.isSelected(1)">
+			<div class="headNav">
 				<ul>
 					<li ng-click="tabM.selectTab(1)"><h1>Map</h1></li>
 					<li ng-click="tabM.selectTab(2)"><h1>Order</h1></li>
 				</ul>
 			</div>
-			<div id="contentHolder" class="ratio">
-				<div id="map" ng-show="tabM.isSelected(1)"></div>
-				<div id="orders" class="ratio" ng-show="tabM.isSelected(2)">
+			<div class="ratio contentHolder">
+				<div id="map"></div>
+			</div>
+			<div class="footer"></div>
+		</div>
+		<div class="mainDiv" id="reverseMain" ng-show="tabM.isSelected(2)">
+			<div class="headNav">
+				<ul>
+					<li ng-click="tabM.selectTab(1)"><h1>Map</h1></li>
+					<li ng-click="tabM.selectTab(2)"><h1>Order</h1></li>
+				</ul>
+			</div>
+			<div class="ratio contentHolder">
+				<div id="orders" class="ratio">
 					<div class="sixtySix">
 						<h2>Thank you for your interest!</h2>
 						<p>Here you can get in contact us directly. Just select order for an advance large order or select contact if you just have something you need say.</p>
@@ -27,7 +39,7 @@
 					</form>
 				</div>
 			</div>
-			<div id="footer"></div>
+			<div class="footer"></div>
 		</div>
 	</div>
 	<script>
@@ -116,7 +128,7 @@
 				lat: {{.coor.Latitude}},
 				lng: {{.coor.Longitude}}},
 			icon: image2
-			});
+		});
 	}
   	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>

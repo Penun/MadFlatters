@@ -20,31 +20,43 @@ body {
 	transform-origin: 100% 50%;
 }
 
-#mainDiv {
+.mainDiv {
 	width: 90%;
 	max-width: 90vw;
-	margin: 13vw auto auto auto;
-}
-
-#backImg {
-	left: 50%;
-	margin-top: -15%;
-	margin-left: -50%;
-	width: 100%;
-	height: auto;
+	margin: 13vw 5vw auto 5vw;
 	position: absolute;
 }
 
-#contentHolder, #headNav {
+#forwardMain {
+	z-index: 1;
+	
+}
+
+#reverseMain {
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+	z-index: -1;
+}
+
+#backImg {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: 2;
+	opacity: 0.5;
+	visibility: hidden;
+}
+
+.contentHolder, .headNav {
 	width: 87%;
 	margin: auto;
 }
 
-#footer, #headNav {
+.footer, .headNav {
 	height: 10vh;
 }
 
-#headNav ul {
+.headNav ul {
 	list-style: none;
 	width: 100%;
 	height: auto;
@@ -52,7 +64,7 @@ body {
 	margin: 0;
 }
 
-#headNav ul li {
+.headNav ul li {
 	width: 49%;
     height: 10vh;
     color: #46A2A0;
