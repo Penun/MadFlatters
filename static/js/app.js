@@ -37,9 +37,9 @@
 
 		this.selectTab = function(newTab){
 			if ($scope.tab != newTab && $scope.AnimState == Constants.FlipAnimStates.PRE){
-				$scope.tab = 0;
 				$scope.pendTab = newTab;
 				$scope.intervalFlip = setInterval(this.flipAnim, 60);
+				$scope.triggerFadeOut();
 			}
 		};
 		this.isSelected = function(checkT){
@@ -144,9 +144,18 @@
 		};
 
 		$scope.fadeOutAnim = function(){
-			clearInterval($scope.intervalFadeOut);
+			if ($scope.fadeOutAnimCyc < 10){
+				var opacity = ($scope.fadeOutAnimCyc + 1) * .1;
+				$scope.targetOut.style.opacity = opacity;
+				$scope.fadeOutAnimCyc++;
+			} else {
+				clearInterval($scope.intervalFadeOut);
+				$scope.tab = $scope.pendTab;
+				$scope.fadeOutAnimCyc = 0;
+			}
 		};
 		$scope.triggerFadeOut = function(){
+			$scope.targetOut.style.visibility = "visible";
 			$scope.intervalFadeOut = setInterval($scope.fadeOutAnim, 50);
 		};
 
@@ -165,7 +174,7 @@
 				clearInterval($scope.intervalFadeIn);
 
 				$scope.targetIn.style.visibility = "hidden";
-				$scope.targetOut.style.visibility = "visible";
+				$scope.targetOut.style.visibility = "hidden";
 				$scope.fadeInAnimCyc = 0;
 				var swapTarget = $scope.targetOut;
 				$scope.targetOut = $scope.targetIn;
@@ -175,6 +184,7 @@
 			}
 		};
 		$scope.triggerFadeIn = function(){
+			$scope.targetIn.style.visibility = "visible";
 			$scope.intervalFadeIn = setInterval($scope.fadeInAnim, 100);
 		};
 		$scope.triggerFadeIn();
