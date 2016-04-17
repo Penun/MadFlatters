@@ -53,7 +53,7 @@ body {
 	height: 10vh;
 }
 
-.headNav ul {
+ul {
 	list-style: none;
 	width: 100%;
 	height: auto;
@@ -61,13 +61,20 @@ body {
 	margin: 0;
 }
 
-.headNav ul li {
+li {
 	width: 49%;
-    height: 10vh;
-    color: #46A2A0;
-    text-align: center;
+	text-align: center;
     position: relative;
     display: inline-flex;
+}
+
+.headNav ul li {
+    height: 10vh;
+    color: #46A2A0;
+}
+
+li h2 {
+	margin: auto;
 }
 
 h1 {
@@ -101,6 +108,11 @@ h1 {
 }
 
 #orderForm input, textarea {
+	background: #d5bc8e;
+	color: #783e23;
+}
+
+#commentForm input, textarea {
 	background: #d5bc8e;
 	color: #783e23;
 }
