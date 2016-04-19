@@ -147,7 +147,7 @@ form p {
 	float:left;
 }
 
-form label {
+label {
 	width:35%;
 	margin:0;
 	float:left;
@@ -155,10 +155,20 @@ form label {
 	text-align: right;
 }
 
-form input, textarea {
+input, textarea {
 	width: 47%;
 	float:left;
 	margin: 0 0 0 1%;
+}
+
+input[type="radio"]{
+	width: 25%;
+	float: unset;
+}
+
+label.radio {
+	width: 20%;
+	text-align: center;
 }
 
 button {
