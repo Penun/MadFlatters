@@ -26,6 +26,7 @@ type Orders struct {
 	Details string `json:"details"`
 	Archived int `json:"archived"`
 	OrdCom int `json:"ord_com"`
+	Occurence time.Time `json:"occurence"`
 }
 
 func init() {

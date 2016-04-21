@@ -29,9 +29,9 @@ func GetArchivedOrders(archived bool) []Orders{
 	o := orm.NewOrm()
 	var orders []Orders
 	if archived {
-		o.QueryTable("orders").Filter("archived", 1).All(&orders)
+		o.QueryTable("orders").Filter("archived", 1).OrderBy("-ord_com", "occurence").All(&orders)
 	} else {
-		o.QueryTable("orders").Filter("archived", 0).All(&orders)
+		o.QueryTable("orders").Filter("archived", 0).OrderBy("-ord_com", "occurence").All(&orders)
 	}
 	if len(orders) > 0 {
 		return orders
