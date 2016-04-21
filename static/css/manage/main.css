@@ -118,19 +118,17 @@ p.details {
 }
 
 #passForm label {
-	width:35%;
-	margin:0;
-	float:left;
+	width: 35%;
+	margin: 0 0 0 30%;
 	font-weight:bold;
 	color:#1595FE;
 	text-shadow:1px 1px 0 #000;
-	text-align: right;
 }
 
 #passForm input {
 	width: 47%;
 	float:left;
-	margin: 0 0 0 1%;
+	margin: 0 0 0 30%;
 }
 
 #upPassError {
