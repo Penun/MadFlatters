@@ -22,8 +22,10 @@ type Orders struct {
 	Or_id int `orm:"pk" json:"or_id"`
 	FullName string `json:"fullName"`
 	Phone string `json:"phone"`
+	Email string `json:"email"`
 	Details string `json:"details"`
 	Archived int `json:"archived"`
+	OrdCom int `json:"ord_com"`
 }
 
 func init() {

@@ -64,10 +64,10 @@
 							<p><label for="">Comment:</label><textarea name="details" ng-model="comCont.comment.details" placeholder="Let us hear it." required></textarea></p>
 							<p><label for="human">Are you human?:</label>
 								<label class="radio">
-									<input type="radio" name="human1901" ng-model="ordCont.order.human1901" value="veryHuman" />I am
+									<input type="radio" name="human1901" ng-model="comCont.comment.human1901" value="veryHuman" />I am
 								</label>
 								<label class="radio">								
-									<input type="radio" name="human1901" ng-model="ordCont.order.human1901" value="Icanttellyou" />I am not
+									<input type="radio" name="human1901" ng-model="comCont.comment.human1901" value="Icanttellyou" />I am not
 								</label></p>
 							<p><button type="submit" name="submit" class="button">Get In Touch</button></p>
 						</form>

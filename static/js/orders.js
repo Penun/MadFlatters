@@ -16,18 +16,16 @@
 		this.submitOrder = function(){
 			if (this.order.human1901 == "veryHuman"){
 				var sendData = {};
-				sendData.oOderC = true;
+				sendData.ord_com = 1;
 				sendData.fullName = this.order.fullName;
 				sendData.phone = this.order.phone1 + '-' + this.order.phone2 + '-' + this.order.phone3;
 				sendData.details = this.order.details;
 				sendData.human1901 = this.order.human1901;
 				sendData.oCK = oCK;			
-				$http.post('/contact/order', sendData).success(function(data){
-					if (data.success){
+				$http.post('/contact', sendData).success(function(data){
+					if (data.response != null){
 						var orderDiv = document.getElementById("orderDiv");
 						orderDiv.innerHTML = data.response;
-					} else {
-						console.log(data.error);
 					}
 				});
 				this.order = {};
@@ -38,17 +36,16 @@
 		this.comment = {};
 		this.submitOrder = function(){
 			var sendData = {};
-			sendData.oOderC = false;
+			sendData.ord_com = 0;
 			sendData.fullName = this.comment.fullName;
 			sendData.email = this.comment.email;
 			sendData.details = this.comment.details;
+			sendData.human1901 = this.comment.human1901;
 			sendData.oCK = oCK;
-			$http.post('/contact/comment', sendData).success(function(data){
-				if (data.success){
-					var orderDiv = document.getElementById("commentDiv");
-					orderDiv.innerHTML = data.response;
-				} else {
-					console.log(data.error);
+			$http.post('/contact', sendData).success(function(data){
+				if (data.response != null){
+					var commentDiv = document.getElementById("commentDiv");
+					commentDiv.innerHTML = data.response;
 				}
 			});
 			this.comment = {};
