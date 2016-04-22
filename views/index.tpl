@@ -19,14 +19,16 @@
 			<div class="headNav">
 				<ul>
 					<li ng-click="tabM.selectTab(1)"><h1>Map</h1></li>
-					<li ng-click="tabM.selectTab(2)"><h1>Order</h1></li>
+					<li ng-click="tabM.selectTab(2)"><h1>Contact</h1></li>
 				</ul>
 			</div>
 			<div class="ratio contentHolder">
 				<div id="orders" class="ratio" ng-controller="orderTabManager as oTabMan">
 					<div class="sixtySix">
-						<h2>Thank you for your interest!</h2>
-						<p>Here you can get in contact us directly. Just select order for an advance large order or select comment if you just have something you would like to say.</p>
+						<div ng-show="oTabMan.isSelected(0)">
+							<h2>Thank you for your interest!</h2>
+							<p>Here you can get in contact us directly. Just select order for an advance large order or select comment if you just have something you would like to say.</p>
+						</div>
 						<ul>
 							<li ng-click="oTabMan.selectTab(1)"><h2>Order</h2></li>
 							<li ng-click="oTabMan.selectTab(2)"><h2>Comment</h2></li>
@@ -38,19 +40,19 @@
 							<p>This is where you can place bulk orders in advance. Just give us a name, a phone number we can contact you at, and a brief description of what we might help you with.</p>
 						</div>
 						<form id="orderForm" name="orderForm" ng-controller="orderController as ordCont" ng-submit="orderForm.$valid && ordCont.submitOrder()" novalidate>
-							<p><label for="">Name:</label><input type="text" maxlength="50" name="fullName" ng-model="ordCont.order.fullName" placeholder="Contact Name" required/></p>
-							<p><label for="">Phone:</label><input type="tel" pattern="[0-9]{3}" name="phone1" id="phone1" ng-model="ordCont.order.phone1" maxlength="3" size="3" placeholder="555" required/>-
+							<p><label for="">Name:</label><br/><input type="text" maxlength="50" name="fullName" ng-model="ordCont.order.fullName" placeholder="Contact Name" required/></p>
+							<p><label for="">Phone:</label><br/><input type="tel" pattern="[0-9]{3}" name="phone1" id="phone1" ng-model="ordCont.order.phone1" maxlength="3" size="3" placeholder="555" required/>-
 								<input type="tel" pattern="[0-9]{3}" name="phone2" id="phone2" ng-model="ordCont.order.phone2" maxlength="3" size="3" placeholder="555" required/>-
 								<input type="tel" pattern="[0-9]{4}" name="phone3" id="phone3" ng-model="ordCont.order.phone3" maxlength="4" size="4" placeholder="5555" required/></p>
-							<p><label for="">Details:</label><textarea name="details" ng-model="ordCont.order.details" placeholder="Give us some details of what we can help you with before we give you a call to confirm your order." required></textarea></p>
-							<p><label for="human">Are you human?:</label>
+							<p><label for="">Details:</label><br/><textarea name="details" ng-model="ordCont.order.details" placeholder="Give us some details of what we can help you with before we give you a call to confirm your order." required></textarea></p>
+							<p><label for="human">Are you a human at least 13 years of age?:</label><br/>
 								<label class="radio">								
 									<input type="radio" name="human1901" ng-model="ordCont.order.human1901" value="veryHuman" >I am
-								</label>
+								</label><br />
 								<label class="radio">								
 									<input type="radio" name="human1901" ng-model="ordCont.order.human1901" value="Icanttellyou">I am not
 								</label></p>
-							<p><button type="submit" name="submit" class="button">Get In Touch</button></p>
+							<p><button type="submit" name="submit" class="button">Send</button></p>
 						</form>
 					</div>
 					<div ng-show="oTabMan.isSelected(2)" id="commentDiv">
@@ -59,17 +61,17 @@
 							<p>Here you can leave us your comments, concerns, etc. Just fill out the form including your name, email, and message.</p>
 						</div>
 						<form id="commentForm" name="commentForm" ng-controller="commentController as comCont" ng-submit="commentForm.$valid && comCont.submitOrder()" novalidate>
-							<p><label for="">Name:</label><input type="text" maxlength="50" name="fullName" ng-model="comCont.comment.fullName" placeholder="Contact Name" required/></p>
-							<p><label for="">Email:</label><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" name="email" id="email" ng-model="comCont.comment.email" placeholder="your@email.com" required/></p>
-							<p><label for="">Comment:</label><textarea name="details" ng-model="comCont.comment.details" placeholder="Let us hear it." required></textarea></p>
-							<p><label for="human">Are you human?:</label>
+							<p><label for="">Name:</label><br /><input type="text" maxlength="50" name="fullName" ng-model="comCont.comment.fullName" placeholder="Contact Name" required/></p>
+							<p><label for="">Email:</label><br /><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" name="email" id="email" ng-model="comCont.comment.email" placeholder="your@email.com" required/></p>
+							<p><label for="">Comment:</label><br /><textarea name="details" ng-model="comCont.comment.details" placeholder="Let us hear it." required></textarea></p>
+							<p><label for="human">Are you a human at least 13 years of age?:</label><br />
 								<label class="radio">
 									<input type="radio" name="human1901" ng-model="comCont.comment.human1901" value="veryHuman" />I am
-								</label>
+								</label><br />
 								<label class="radio">								
 									<input type="radio" name="human1901" ng-model="comCont.comment.human1901" value="Icanttellyou" />I am not
 								</label></p>
-							<p><button type="submit" name="submit" class="button">Get In Touch</button></p>
+							<p><button type="submit" name="submit" class="button">Send</button></p>
 						</form>
 					</div>
 				</div>

@@ -35,17 +35,17 @@ form p {
 }
 
 form label {
-	width:35%;
-	margin:0;
-	float:left;
+	width:80%;
+	max-width: 250px;
+	margin: 0 0 0 10%;
 	font-weight:bold;
-	text-align: right;
 }
 
 form input, textarea {
-	width: 47%;
+	width: 80%;
+	max-width: 250px;
 	float:left;
-	margin: 0 0 0 1%;
+	margin: 0 0 0 10%;
 }
 
 button {
