@@ -29,7 +29,7 @@
 							<h2>Thank you for your interest!</h2>
 							<p>Here you can get in contact us directly. Just select order for an advance large order or select comment if you just have something you would like to say.</p>
 						</div>
-						<ul>
+						<ul class="innerNav">
 							<li ng-click="oTabMan.selectTab(1)"><h2>Order</h2></li>
 							<li ng-click="oTabMan.selectTab(2)"><h2>Comment</h2></li>
 						</ul>

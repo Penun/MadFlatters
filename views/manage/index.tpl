@@ -28,13 +28,18 @@
 			</div>
 		</div>
 		<div id="orderTab" ng-show="tabM.isSelected(2)" ng-controller="ordersController as ordCont">
-			<div ng-repeat="order in orders" class="oWrapper">
-				<input type="checkbox" name="selectedOrders[]" value="{{"{{order.or_id}}"}}" ng-model="order.selected" />
-				<div class="order" ng-click="ordCont.RevealDetails(order.or_id)"><b><i>{{"{{order.fullName}}"}}</i></b></div><div class="order" ng-click="ordCont.RevealDetails(order.or_id)"><b>{{"{{order.phone}}{{order.email}}"}}</b></div><br />
-				<p ng-show="order.showDetails" class="details">{{"{{order.details}}"}}</p>
+			<div ng-show="orders.length > 0">
+				<div ng-repeat="order in orders" class="oWrapper">
+					<input type="checkbox" name="selectedOrders[]" value="{{"{{order.or_id}}"}}" ng-model="order.selected" />
+					<div class="order" ng-click="ordCont.RevealDetails(order.or_id)"><b><i>{{"{{order.fullName}}"}}</i></b></div><div class="order" ng-click="ordCont.RevealDetails(order.or_id)"><b>{{"{{order.phone}}{{order.email}}"}}</b></div><br />
+					<p ng-show="order.showDetails" class="details">{{"{{order.details}}"}}</p>
+				</div>
+				<div>
+					<a href="" ng-click="ordCont.Archive()" class="button">Archive Selected</a>
+				</div>
 			</div>
-			<div>
-				<a href="" ng-click="ordCont.Archive()" class="button">Archive Selected</a>
+			<div ng-show="orders.length == 0">
+				<p class="center">No Orders To View</p>
 			</div>
 		</div>
 		<div id="upPassTab" ng-controller="upPassController as upPCont" ng-show="tabM.isSelected(3)">

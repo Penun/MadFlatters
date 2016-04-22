@@ -109,6 +109,18 @@ h1 {
 	margin: auto;
 }
 
+.innerNav li {
+	height: 3vw;
+	background: #512b20;
+    background: -webkit-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7); 
+	background: -o-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7);
+	background: -moz-radial-gradient(circle, #512b20, #955228, #c79534, #d6c5a7); 
+	background: radial-gradient(ellipse, #512b20, #955228, #c79534, #d6c5a7);
+	border-style: ridge;
+	border-width: 2px;
+    color: #D0D0D0;
+}
+
 #orderForm input, textarea {
 	background: #d5bc8e;
 	color: #783e23;
@@ -147,6 +159,10 @@ form p {
 	width:100%;
 	margin:10px 0;
 	float:left;
+}
+
+span.sixtySix p {
+	text-align: center;
 }
 
 label {

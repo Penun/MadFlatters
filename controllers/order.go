@@ -43,28 +43,28 @@ func (this *OrderController) Post() {
 				response.Success = true
 				response.Error = ""
 				if ord.OrdCom == 1 {
-					response.Response = "<div class=\"sixtySix\">Thank You!! We will read your order and call you to confirm shortly!</div>"
+					response.Response = "<span class=\"sixtySix\"><br /><br /><p>Thank You!! We will read your order and call you to confirm shortly!</p></span>"
 				} else {
-					response.Response = "<div class=\"sixtySix\">Thank You!! We will read your comment and get back to you!</div>"
+					response.Response = "<span class=\"sixtySix\"><br /><br /><p>Thank You!! We will read your comment and get back to you!</p></span>"
 				}
 			} else {
 				response.Success = false
 				response.Error = "Failed to upload."
 				if ord.OrdCom == 1 {
-					response.Response = "<div class=\"sixtySix\">Sorry! Something has gone wrong. Please try calling us at (555) 555-5555.</div>"
+					response.Response = "<span class=\"sixtySix\"><br /><br /><p>Sorry! Something has gone wrong. Please try calling us at (555) 555-5555.</p></span>"
 				} else {
-					response.Response = "<div class=\"sixtySix\">Sorry! Something has gone wrong. Please refresh and try again. :/</div>"
+					response.Response = "<span class=\"sixtySix\"><br /><br /><p>Sorry! Something has gone wrong. Please refresh and try again. :/</p></span>"
 				}
 			}
 		} else {
 			response.Success = false;
 			response.Error = "Missing Key"
-			response.Response = "<div class=\"sixtySix\">Sorry! Something has gone wrong. Please refresh and try again. :/</div>"
+			response.Response = "<span class=\"sixtySix\"><br /><br /><p>Sorry! Something has gone wrong. Please refresh and try again. :/</p></span>"
 		}
 	} else {
 		response.Success = false
 		response.Error = err.Error()
-		response.Response = "<div class=\"sixtySix\">Sorry! Something has gone wrong. Please refresh and try again. :/</div>"
+		response.Response = "<span class=\"sixtySix\"><br /><br /><p>Sorry! Something has gone wrong. Please refresh and try again. :/</p></span>"
 	}
 	this.Data["json"] = &response
 	this.ServeJSON()
