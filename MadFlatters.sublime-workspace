@@ -4,6 +4,142 @@
 		"selected_items":
 		[
 			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"cu",
+				"curTimeUnix"
+			],
+			[
+				"Ord",
+				"OrdCom"
+			],
+			[
+				"ord",
+				"ordSub"
+			],
+			[
+				"or",
+				"orderDiv"
+			],
+			[
+				"v",
+				"visibility"
+			],
+			[
+				"trigger",
+				"triggerFadeOut"
+			],
+			[
+				"sw",
+				"swapZInd"
+			],
+			[
+				"tar",
+				"targetIn"
+			],
+			[
+				"s",
+				"swapZInd"
+			],
+			[
+				"targ",
+				"targetOut"
+			],
+			[
+				"ta",
+				"targetIn"
+			],
+			[
+				"trig",
+				"triggerFadeIn"
+			],
+			[
+				"I",
+				"fadeInAnimCyc"
+			],
+			[
+				"an",
+				"fadeInAnimCyc"
+			],
+			[
+				"target",
+				"targetIn"
+			],
+			[
+				"t",
+				"targetOut"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"fa",
+				"fadeInAnimCyc"
+			],
+			[
+				"fad",
+				"fadeInAnimCyc"
+			],
+			[
+				"int",
+				"intervalFadeOut"
+			],
+			[
+				"in",
+				"intervalFadeOut"
+			],
+			[
+				"tr",
+				"triggerFade"
+			],
+			[
+				"nu",
+				"newValue"
+			],
+			[
+				"cur",
+				"curTransX"
+			],
+			[
+				"flip",
+				"flipRight"
+			],
+			[
+				"a",
+				"animCycles"
+			],
+			[
+				"Anim",
+				"AnimFact"
+			],
+			[
+				"Anima",
+				"AnimationFactory"
+			],
+			[
+				"curT",
+				"curTransX"
+			],
+			[
+				"ele",
+				"else"
+			],
+			[
+				"sca",
+				"scalOut"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
 				"margin",
 				"margin-top"
 			],
@@ -36,10 +172,6 @@
 				"upSuc"
 			],
 			[
-				"ord",
-				"ordLength"
-			],
-			[
 				"text",
 				"text-align"
 			],
@@ -56,24 +188,12 @@
 				"font-size"
 			],
 			[
-				"bor",
-				"border-right"
-			],
-			[
 				"paddi",
 				"padding"
 			],
 			[
-				"ma",
-				"margin"
-			],
-			[
 				"c",
 				"color"
-			],
-			[
-				"back",
-				"background-color"
 			],
 			[
 				"border-wid",
@@ -92,16 +212,8 @@
 				"padding-top"
 			],
 			[
-				"in",
-				"input	Tag"
-			],
-			[
 				"bt",
 				"button	Tag"
-			],
-			[
-				"a",
-				"activeOrders"
 			],
 			[
 				"Or",
@@ -113,10 +225,6 @@
 			],
 			[
 				"su",
-				"success"
-			],
-			[
-				"s",
 				"success"
 			],
 			[
@@ -176,18 +284,74 @@
 	"buffers":
 	[
 		{
-			"file": "static/css/main.css",
+			"file": "controllers/order.go",
 			"settings":
 			{
-				"buffer_size": 2467,
+				"buffer_size": 2300,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "static/js/app.js",
+			"file": "models/models.go",
 			"settings":
 			{
-				"buffer_size": 835,
+				"buffer_size": 683,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/home.go",
+			"settings":
+			{
+				"buffer_size": 876,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/js/manage/coordinates.js",
+			"settings":
+			{
+				"buffer_size": 1366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/manage/index.tpl",
+			"settings":
+			{
+				"buffer_size": 2979,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/js/orders.js",
+			"settings":
+			{
+				"buffer_size": 1637,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/css/manage/main.css",
+			"settings":
+			{
+				"buffer_size": 2879,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/js/manage/orders.js",
+			"settings":
+			{
+				"buffer_size": 1748,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/manage/includes/nav.html",
+			"settings":
+			{
+				"buffer_size": 335,
 				"line_ending": "Unix"
 			}
 		}
@@ -216,53 +380,62 @@
 	},
 	"file_history":
 	[
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/conf/app.conf",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/main.css",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/main.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/js.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/js.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/js.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/styles.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/styles.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/styles.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/header.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/header.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/header.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/nav.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/manage/main.css",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/login/main.css",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/routers/router.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/orders.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/login.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/logout.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/contact/failure_comment.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/comment.go",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/index.tpl",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/orders.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/app.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/contact/success_order.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/contact/failure_order.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/contact/success_comment.html",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/anima.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/coordinates.js",
+		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/app.js",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/index.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/orders.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login.tpl",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/index.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/orders.js",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/coordinates.js",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/updatepassword.js",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/nav.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/manage/app.js",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/coordinates.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/login.tpl",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/main.css",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/css/manage/main.css",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/manage/home.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/order.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/home.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/controllers/login.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/app.js",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/login/app.js",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/styles.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/js.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/login/includes/header.tpl",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/css/text.css",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/views/includes/styles.php",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/views/includes/form.php",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/styles.html",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/models.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/routers/router.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/coordinates.go",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/models/orders.go",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/error.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/js.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/conf/app.conf",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/main.go",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/controllers/login.php",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/controllers/admin/home.php",
 		"/media/peakhan/New Volume/BAchup/Documents/Webs/broker/application/libraries/Auth.php",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/includes/header.tpl",
 		"/home/peakhan/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/updatePassword.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/coordinates.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/orders.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/MadFlatters",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/manage/coordinates/add.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/js.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/styles.html",
-		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/includes/header.tpl",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/contact/failure.html",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/views/contact/success.html",
 		"/home/peakhan/GoWork/src/github.com/Penun/MadFlatters/static/js/angular.1.5.min.js",
@@ -293,6 +466,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";\n",
+			"commentDiv",
+			")\n",
+			";\n",
+			">",
+			");\n",
+			"rotateY",
+			"1",
+			"scope",
+			";\n",
 			"25",
 			";\n",
 			"%;\n",
@@ -319,28 +502,156 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "static/css/main.css",
+					"file": "controllers/order.go",
 					"settings":
 					{
-						"buffer_size": 2467,
+						"buffer_size": 2300,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								286,
-								286
+								1232,
+								1232
+							],
+							[
+								1382,
+								1382
+							],
+							[
+								1647,
+								1647
+							],
+							[
+								1804,
+								1804
+							],
+							[
+								2031,
+								2031
+							],
+							[
+								2244,
+								2244
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/Go/Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 306.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "models/models.go",
+					"settings":
+					{
+						"buffer_size": 683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Go/Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "controllers/home.go",
+					"settings":
+					{
+						"buffer_size": 876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								853,
+								860
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Go/Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "static/js/manage/coordinates.js",
+					"settings":
+					{
+						"buffer_size": 1366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								413,
+								413
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/manage/index.tpl",
+					"settings":
+					{
+						"buffer_size": 2979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -351,29 +662,109 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 1,
-					"file": "static/js/app.js",
+					"buffer": 5,
+					"file": "static/js/orders.js",
 					"settings":
 					{
-						"buffer_size": 835,
+						"buffer_size": 1637,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								432,
-								432
+								1418,
+								1418
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "static/css/manage/main.css",
+					"settings":
+					{
+						"buffer_size": 2879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1312,
+								1312
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "static/js/manage/orders.js",
+					"settings":
+					{
+						"buffer_size": 1748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								189,
+								189
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "views/manage/includes/nav.html",
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -390,7 +781,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
@@ -486,7 +877,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true
 }
